@@ -1,4 +1,5 @@
 import stTherese from "./images/st-therese.jpg";
+import FounderPic from "./images/fr-paul.jpeg";
 
 export const church = {
   name: "St' Theresa of Child Jesus Church",
@@ -205,7 +206,7 @@ export const founders = [
     tamilRole: "நிறுவனர் மற்றும் மறைப்பணி குரு",
     years: "1882 – 1969",
 
-    image: "/images/fr-s-paul.jpg",
+    image: FounderPic,
 
     bio: {
       english:

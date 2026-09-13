@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import father1 from "./images/st-therese.jpg";
+import FounderPic from "./images/fr-paul.jpeg";
+import ChurchPic from "./images/tsp-church.jpeg";
 import { Routes, Route, Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X, MapPin, Phone, Mail, ArrowRight, Cross, Clock, ChevronRight } from "lucide-react";
 import { church, saints, founders, clergy, churchTimeline } from "./data";
@@ -230,7 +232,7 @@ function Header() {
                 {label}
               </NavLink>
             ))}
-            <Link className="nav-cta" to="/#visit" onClick={() => setOpen(false)}>Visit Us <ArrowRight size={16}/></Link>
+            {/* <Link className="nav-cta" to="/#visit" onClick={() => setOpen(false)}>Visit Us <ArrowRight size={16}/></Link> */}
           </nav>
         </div>
       </div>
@@ -1117,7 +1119,7 @@ function ChurchHistory() {
         eyebrow="Our Story • எங்கள் வரலாறு"
         title="Theresapuram Parish History"
         text="A journey of faith, missionary service, community growth and pastoral dedication."
-        image="https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=1800&q=85"
+        image={ChurchPic}
       />
 
       {/* =====================================================
@@ -1176,8 +1178,9 @@ function ChurchHistory() {
         <div className="container detail-grid">
           <div className="history-photo-card">
             <div className="history-photo-placeholder">
-              <Cross size={42} />
-              <span>Fr. S. Paul</span>
+              {/* <Cross size={42} /> */}
+              <img src={FounderPic} alt="FounderPic"/><br/>
+              <span>Fr. S. Paul</span><br />
               <small>Missionary Priest</small>
             </div>
           </div>
