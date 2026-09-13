@@ -198,12 +198,255 @@ export const saints = [
 
 export const founders = [
   {
-    id: 1,
-    name: "Rev. Fr. Joseph Antony",
-    role: "Founding Pastor",
-    years: "1948 — 1972",
-    image: "https://images.unsplash.com/photo-1473177104440-ffee2f376098?auto=format&fit=crop&w=900&q=80",
-    bio: "A devoted pastor whose vision helped establish a welcoming parish rooted in prayer, education and service."
+    id: "fr-s-paul",
+    name: "Rev. Fr. S. Paul",
+    tamilName: "அருட்தந்தை எஸ். பால்",
+    role: "Founder & Missionary Priest",
+    tamilRole: "நிறுவனர் மற்றும் மறைப்பணி குரு",
+    years: "1882 – 1969",
+
+    image: "/images/fr-s-paul.jpg",
+
+    bio: {
+      english:
+        "Rev. Fr. S. Paul was a great Indian missionary who dedicated his life to the service of poor people and new Christians. His missionary work contributed greatly to the development of the Catholic community in Theresapuram.",
+      tamil:
+        "அருட்தந்தை எஸ். பால் அவர்கள் சிறந்த இந்திய மறைப்பணியாளராக இருந்து, ஏழை மக்களுக்கும் புதிய கிறிஸ்தவர்களுக்கும் தனது வாழ்க்கையை அர்ப்பணித்தார். அவரது மறைப்பணி தேரேசாபுரத்தின் கத்தோலிக்க சமூகத்தின் வளர்ச்சிக்கு பெரிதும் உதவியது."
+    },
+
+    earlyLife: [
+      {
+        title: "Birth • பிறப்பு",
+        english:
+          "Rev. Fr. S. Paul was born at Cheptet on 24 October 1882.",
+        tamil:
+          "அருட்தந்தை எஸ். பால் அவர்கள் 24 அக்டோபர் 1882 அன்று சேத்துப்பட்டில் பிறந்தார்."
+      },
+      {
+        title: "Native Place • சொந்த ஊர்",
+        english:
+          "He was a native of Nammiandal.",
+        tamil:
+          "அவர் நம்மியாண்டல் பகுதியைச் சேர்ந்தவர்."
+      },
+      {
+        title: "Parents • பெற்றோர்",
+        english:
+          "His parents were Saminini Arulappa and Mariammal.",
+        tamil:
+          "அவரது பெற்றோர் சாமினினி அருளப்பா மற்றும் மரியம்மாள்."
+      },
+      {
+        title: "Baptism • திருமுழுக்கு",
+        english:
+          "He was baptized at Kortampet on 2 November 1882 under the name Chinnappan by Fr. Doressamynader.",
+        tamil:
+          "2 நவம்பர் 1882 அன்று கோர்டாம்பேட்டில் அருட்தந்தை டோரசாமிநாடர் அவர்களால் திருமுழுக்கு பெற்று சின்னப்பன் என்ற பெயர் பெற்றார்."
+      },
+      {
+        title: "Loss of Father • தந்தையை இழந்தது",
+        english:
+          "He lost his father while he was very young.",
+        tamil:
+          "அவர் மிகவும் சிறு வயதிலேயே தனது தந்தையை இழந்தார்."
+      },
+      {
+        title: "Care and Upbringing • வளர்ப்பு",
+        english:
+          "He was brought up at Cheptet by Fr. Darras, who took care of him and his mother.",
+        tamil:
+          "அருட்தந்தை டாரஸ் அவர்கள் அவரையும் அவரது தாயாரையும் கவனித்து சேத்துப்பட்டில் அவரை வளர்த்தார்."
+      }
+    ],
+
+    formation: [
+      {
+        title: "Tonsure • முதல் துறவற சடங்கு",
+        date: "16 October 1905",
+        tamilDate: "16 அக்டோபர் 1905"
+      },
+      {
+        title: "Minor Orders • சிறிய திருப்பணிகள்",
+        date: "18 October 1906",
+        tamilDate: "18 அக்டோபர் 1906"
+      },
+      {
+        title: "Sub-Deacon • துணைத் திருத்தொண்டர்",
+        date: "15 October 1907",
+        tamilDate: "15 அக்டோபர் 1907"
+      },
+      {
+        title: "Deacon • திருத்தொண்டர்",
+        date: "19 October 1908",
+        tamilDate: "19 அக்டோபர் 1908"
+      },
+      {
+        title: "Priestly Ordination • குருத்துவ அருட்பொழிவு",
+        date: "21 October 1909",
+        tamilDate: "21 அக்டோபர் 1909"
+      }
+    ],
+
+    ordination: {
+      english:
+        "He was ordained priest on 21 October 1909 by Mgr. Basle, coadjutor Bishop of Mysore, as Mgr. Morel was ill.",
+      tamil:
+        "21 அக்டோபர் 1909 அன்று மான்சிஞோர் பாஸ்லே, மைசூர் மறைமாவட்டத்தின் துணை ஆயர் அவர்களால் அருட்தந்தையாக திருநிலைப்படுத்தப்பட்டார். அப்போது மான்சிஞோர் மோரல் அவர்கள் உடல்நலக்குறைவால் இருந்தார்."
+    },
+
+    theresapuram: {
+      introduction: {
+        english:
+          "The place where Theresapuram is situated today was a forest about 50 years earlier. Fr. S. Paul, a great Indian missionary, developed the area into a fine village of about 30 families and built a chapel there.",
+        tamil:
+          "இன்று தேரேசாபுரம் அமைந்துள்ள இடம் சுமார் 50 ஆண்டுகளுக்கு முன்பு ஒரு காடாக இருந்தது. சிறந்த இந்திய மறைப்பணியாளரான அருட்தந்தை எஸ். பால் அவர்கள் அந்தப் பகுதியை சுமார் 30 குடும்பங்கள் வாழும் சிறந்த கிராமமாக வளர்த்து, அங்கு ஒரு சிற்றாலயத்தையும் கட்டினார்."
+      },
+
+      developments: [
+        {
+          title: "Development of the Village • கிராம வளர்ச்சி",
+          english:
+            "Fr. S. Paul helped transform the forest area into a developing village where Catholic families could live and grow in faith.",
+          tamil:
+            "அருட்தந்தை எஸ். பால் அவர்கள் காடாக இருந்த பகுதியை வளர்ந்து வரும் கிராமமாக மாற்ற உதவினார். அங்கு கத்தோலிக்க குடும்பங்கள் வாழ்ந்து விசுவாசத்தில் வளர வழிவகை செய்தார்."
+        },
+        {
+          title: "Building of the Chapel • சிற்றாலயம் அமைத்தல்",
+          english:
+            "He built a chapel for the Catholic community and helped establish a place for prayer and worship.",
+          tamil:
+            "கத்தோலிக்க சமூகத்திற்காக ஒரு சிற்றாலயத்தை அமைத்து, மக்கள் இறைவனை வழிபடவும் ஜெபிக்கவும் ஒரு இடத்தை உருவாக்கினார்."
+        },
+        {
+          title: "Missionary Work • மறைப்பணி",
+          english:
+            "His missionary service helped strengthen the Catholic faith and community in the area.",
+          tamil:
+            "அவரது மறைப்பணி அப்பகுதியில் கத்தோலிக்க விசுவாசத்தையும் சமூகத்தையும் வலுப்படுத்த உதவியது."
+        },
+        {
+          title: "Foundation for Future Growth • எதிர்கால வளர்ச்சிக்கான அடித்தளம்",
+          english:
+            "The work begun by Fr. S. Paul became an important foundation for the later spiritual and material growth of the parish.",
+          tamil:
+            "அருட்தந்தை எஸ். பால் அவர்கள் தொடங்கிய பணி, பின்னர் பங்கின் ஆன்மீக மற்றும் பொருளாதார வளர்ச்சிக்கான முக்கிய அடித்தளமாக அமைந்தது."
+        }
+      ]
+    },
+
+    ministry: [
+      {
+        period: "1910",
+        place: "Chetpet",
+        tamilPlace: "சேத்துப்பட்டு",
+        english:
+          "He began his missionary ministry at Chetpet and cared especially for poor and new Christians.",
+        tamil:
+          "சேத்துப்பட்டில் தனது மறைப்பணியைத் தொடங்கி, ஏழைகள் மற்றும் புதிய கிறிஸ்தவர்களை சிறப்பாக கவனித்தார்."
+      },
+      {
+        period: "1910 – 1915",
+        place: "Peria Kolapallur",
+        tamilPlace: "பெரிய கொளப்பல்லூர்",
+        english:
+          "He served the Catholic community at Peria Kolapallur.",
+        tamil:
+          "பெரிய கொளப்பல்லூரில் கத்தோலிக்க மக்களுக்கு பணியாற்றினார்."
+      },
+      {
+        period: "1915 – 1917",
+        place: "Chetpet",
+        tamilPlace: "சேத்துப்பட்டு",
+        english:
+          "During 1915–1917, when Mgr. Colas was at war, he also looked after Chetpet.",
+        tamil:
+          "1915 முதல் 1917 வரை மான்சிஞோர் கோலாஸ் அவர்கள் போரில் இருந்தபோது, சேத்துப்பட்டையும் அவர் கவனித்தார்."
+      },
+      {
+        period: "1917 – 1921",
+        place: "Peria Kolapallur",
+        tamilPlace: "பெரிய கொளப்பல்லூர்",
+        english:
+          "He continued his missionary ministry at Peria Kolapallur.",
+        tamil:
+          "பெரிய கொளப்பல்லூரில் தனது மறைப்பணியைத் தொடர்ந்து செய்தார்."
+      },
+      {
+        period: "1921 – 1932",
+        place: "Wandiwash",
+        tamilPlace: "வந்தவாசி",
+        english:
+          "He served the people at Wandiwash for eleven years.",
+        tamil:
+          "பதினொன்று ஆண்டுகள் வந்தவாசியில் மக்களுக்கு பணியாற்றினார்."
+      },
+      {
+        period: "1932 – 1942",
+        place: "Cheyyur",
+        tamilPlace: "செய்யூர்",
+        english:
+          "He continued his pastoral and missionary service at Cheyyur.",
+        tamil:
+          "செய்யூரில் தனது மேய்ப்புப்பணி மற்றும் மறைப்பணியைத் தொடர்ந்து செய்தார்."
+      },
+      {
+        period: "1942 – 1952",
+        place: "Madurantakam",
+        tamilPlace: "மதுராந்தகம்",
+        english:
+          "He served the Catholic community at Madurantakam.",
+        tamil:
+          "மதுராந்தகத்தில் கத்தோலிக்க மக்களுக்கு பணியாற்றினார்."
+      },
+      {
+        period: "1952 – 1957",
+        place: "Ariankuppam",
+        tamilPlace: "அரியாங்குப்பம்",
+        english:
+          "He continued his missionary ministry at Ariankuppam.",
+        tamil:
+          "அரியாங்குப்பத்தில் தனது மறைப்பணியைத் தொடர்ந்து செய்தார்."
+      },
+      {
+        period: "1957 – 1963",
+        place: "Kallakurichi",
+        tamilPlace: "கள்ளக்குறிச்சி",
+        english:
+          "From 1957 to 1963, he served as Parish Priest at Kallakurichi.",
+        tamil:
+          "1957 முதல் 1963 வரை கள்ளக்குறிச்சியில் பங்குத்தந்தையாக பணியாற்றினார்."
+      },
+      {
+        period: "1963 – 1969",
+        place: "Rita Nagar Agricultural Colony",
+        tamilPlace: "ரீட்டா நகர் விவசாயக் குடியிருப்பு",
+        english:
+          "He then looked specially after the agricultural colony of Rita Nagar near Durgam.",
+        tamil:
+          "பின்னர் துர்கம் அருகிலுள்ள ரீட்டா நகர் விவசாயக் குடியிருப்பை சிறப்பாக கவனித்து வந்தார்."
+      }
+    ],
+
+    finalYears: {
+      english:
+        "Completely worn out after many years of missionary service, he came to Pondicherry and died at the Cluny clinic on 22 September 1969.",
+      tamil:
+        "பல ஆண்டுகள் மறைப்பணியில் உழைத்ததால் உடல்நலம் மிகவும் குன்றிய நிலையில் புதுச்சேரிக்கு வந்தார். 22 செப்டம்பர் 1969 அன்று குளூனி மருத்துவமனையில் இறைவனடி சேர்ந்தார்."
+    },
+
+    burial: {
+      english:
+        "He was buried near the Cathedral on 23 September 1969.",
+      tamil:
+        "23 செப்டம்பர் 1969 அன்று பேராலயத்திற்கு அருகில் அடக்கம் செய்யப்பட்டார்."
+    },
+
+    legacy: {
+      english:
+        "Fr. S. Paul's missionary dedication became part of the early foundation of the Catholic community at Theresapuram. The work begun by him was continued by his successors, helping the parish grow spiritually and materially.",
+      tamil:
+        "அருட்தந்தை எஸ். பால் அவர்களின் மறைப்பணி அர்ப்பணிப்பு தேரேசாபுரத்தின் கத்தோலிக்க சமூகத்தின் ஆரம்பகால அடித்தளத்தின் ஒரு முக்கிய பகுதியாக அமைந்தது. அவர் தொடங்கிய பணியை அவருக்குப் பின்னர் பணியாற்றிய அருட்தந்தையர்கள் தொடர்ந்து முன்னெடுத்து, பங்கின் ஆன்மீக மற்றும் பொருளாதார வளர்ச்சிக்கு உதவினர்."
+    }
   }
 ];
 
