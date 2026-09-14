@@ -18,6 +18,9 @@ import SophiaVasanthaKumari from "./images/Sr.M. Sophia Vasantha Kumari.jpeg";
 import MariyaSarpirasatham from "./images/Sr.Mariya Sarpirasatham.jpeg";
 import PushpaLatha from "./images/Sr.Pushpa Latha.jpeg";
 import imagesProfile from "./images/images.jpg";
+import prabuMetha from "./images/prabuMetha.jpeg";
+import jayanthi from "./images/jayanthi.jpeg";
+
 import { Routes, Route, Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X, MapPin, Phone, Mail, ArrowRight, Cross, Clock, ChevronRight } from "lucide-react";
 // import { church, saints, founders, clergy, churchTimeline } from "./data";
@@ -218,7 +221,7 @@ const theresapuramFathers = [
   },
   {
     id: 5,
-    image: imagesProfile,
+    image: prabuMetha,
     name: "Rev.Fr. Prabu Metha",
     congregation: "Congregation of the Blessed Sacrament",
     ordinationDate: "30.06.1979",
@@ -258,7 +261,7 @@ const theresapuramSisters = [
   },
   {
     id: 4,
-    image: ReginaMary,
+    image: Jayanthi,
     name: "Sr.A.Regina Mary",
     congregation: "Seva Missionary Sister of Mary",
     ordinationDate: "29.04.1996",
@@ -266,7 +269,7 @@ const theresapuramSisters = [
   },
   {
     id: 5,
-    image: Jayanthi,
+    image: jayanthi,
     name: "Sr.A. Jayanthi, FSJ",
     congregation: "Franciscan Sisters of St. Joseph (FSJ)",
     ordinationDate: "23.04.2003",
