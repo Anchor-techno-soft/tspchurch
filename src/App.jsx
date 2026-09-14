@@ -3,9 +3,33 @@ import { useState } from "react";
 import father1 from "./images/st-therese.jpg";
 import FounderPic from "./images/fr-paul.jpeg";
 import ChurchPic from "./images/tsp-church.jpeg";
+import MartinSanthaKumar from "./images/Rev.Fr.D. Martin Santha Kumar.jpeg";
+import IruthayaRaj from "./images/Rev.Fr.J. Iruthaya Raj.jpeg";
+import DanialSarma from "./images/Rev.Fr.P. Danial Sarma.jpeg";
+import LeoMariyaJoseph from "./images/Rev.Fr.P. Leo Mariya Joseph.jpeg";
+import Jayanthi from "./images/Sr.A. Jayanthi, FSJ.jpeg";
+import ReginaMary from "./images/Sr.A.Regina Mary.jpeg";
+import AmirthamJuli from "./images/Sr.D. Amirtham Juli.jpeg";
+import AvilaTheresa from "./images/Sr.D. Avila Theresa, FSJ.jpeg";
+import LillyJacob from "./images/Sr.J.Lilly Jacob.jpeg";
+import SophieJacob from "./images/Sr.J.Sophie Jacob.jpeg";
+import JennateRani from "./images/Sr.M. Jennate Rani.jpeg";
+import SophiaVasanthaKumari from "./images/Sr.M. Sophia Vasantha Kumari.jpeg";
+import MariyaSarpirasatham from "./images/Sr.Mariya Sarpirasatham.jpeg";
+import PushpaLatha from "./images/Sr.Pushpa Latha.jpeg";
+import imagesProfile from "./images/images.jpg";
 import { Routes, Route, Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X, MapPin, Phone, Mail, ArrowRight, Cross, Clock, ChevronRight } from "lucide-react";
-import { church, saints, founders, clergy, churchTimeline } from "./data";
+// import { church, saints, founders, clergy, churchTimeline } from "./data";
+import {
+  church,
+  saints,
+  founders,
+  clergy,
+  churchTimeline,
+  parishFathers
+} from "./data";
+
 
 const navItems = [
   ["/", "Home"],
@@ -155,55 +179,144 @@ const velloreBishops = [
 // FATHERS & SISTERS BORN IN THERESAPURAM
 // ======================================================
 
-const theresapuramBornClergy = [
- 
+// ===============================
+// FATHERS LIST
+// ===============================
+
+const theresapuramFathers = [
   {
     id: 1,
-    image: father1,
+    image: IruthayaRaj,
     name: "Rev.Fr.J. Iruthaya Raj",
-    type: "Father",
-    congregation: "Congregation Name",
-    ordinationDate: "DD Month YYYY",
-    currentMinistry: "Current Parish / Vellore / Institution",
-    contact: "+91 XXXXX XXXXX"
+    congregation: "Vellore Diocese",
+    ordinationDate: "28.05.1992",
+    contact: "14.08.1963",
   },
   {
     id: 2,
-     image: father1,
+    image: MartinSanthaKumar,
     name: "Rev.Fr.D. Martin Santha Kumar",
-    type: "Father",
-    congregation: "Congregation Name",
-    ordinationDate: "DD Month YYYY",
-    currentMinistry: "Current Parish / Vellore / Institution",
-    contact: "+91 XXXXX XXXXX"
-  },{
-    id: 3,
-     image: father1,
-    name: "Rev.Fr.P. Leo Mariya Joseph",
-    type: "Father",
-    congregation: "Congregation Name",
-    ordinationDate: "DD Month YYYY",
-    currentMinistry: "Current Parish / Vellore / Institution",
-    contact: "+91 XXXXX XXXXX"
-  },{
-    id: 4,
-     image: father1,
-    name: "Rev.Fr.P. Danial Sarma",
-    type: "Father",
-    congregation: "Congregation Name",
-    ordinationDate: "DD Month YYYY",
-    currentMinistry: "Current Parish / Vellore / Institution",
-    contact: "+91 XXXXX XXXXX"
-  },{
-    id: 5,
-     image: father1,
-    name: "Rev.Fr. Prabu Metha",
-    type: "Father",
-    congregation: "Congregation Name",
-    ordinationDate: "DD Month YYYY",
-    currentMinistry: "Current Parish / Vellore / Institution",
-    contact: "+91 XXXXX XXXXX"
+    congregation: "Vellore Diocese",
+    ordinationDate: "14.05.2004",
+    contact: "06.06.1976",
   },
+  {
+    id: 3,
+    image: LeoMariyaJoseph,
+    name: "Rev.Fr.P. Leo Mariya Joseph",
+    congregation: "Vellore Diocese",
+    ordinationDate: "24.04.2009",
+    contact: "06.05.1981",
+  },
+  {
+    id: 4,
+    image: DanialSarma,
+    name: "Rev.Fr.P. Danial Sarma",
+    congregation: "Vellore Diocese",
+    ordinationDate: "24.04.2017",
+    contact: "11.08.1987",
+  },
+  {
+    id: 5,
+    image: imagesProfile,
+    name: "Rev.Fr. Prabu Metha",
+    congregation: "Congregation of the Blessed Sacrament",
+    ordinationDate: "30.06.1979",
+    contact: "12.07.2013",
+  },
+];
+
+
+// ===============================
+// SISTERS LIST
+// ===============================
+
+const theresapuramSisters = [
+  {
+    id: 1,
+    image: SophieJacob,
+    name: "Sr.J.Sophie Jacob",
+    congregation: "Sisters of St.Josep of Cluny.",
+    ordinationDate: "28.01.1968",
+    contact: "28.12.1947",
+  },
+  {
+    id: 2,
+    image: LillyJacob,
+    name: "Sr.J.Lilly  Jacob",
+    congregation: "St.Ann's",
+    ordinationDate: "01.05.1999",
+    contact: "14.05.1977",
+  },
+  {
+    id: 3,
+    image: SophiaVasanthaKumari,
+    name: "Sr.M. Sophia Vasantha Kumari",
+    congregation: "Sisters of St.Josep of Cluny.",
+    ordinationDate: "26.05.1998",
+    contact: "25.04.1978",
+  },
+  {
+    id: 4,
+    image: ReginaMary,
+    name: "Sr.A.Regina Mary",
+    congregation: "Seva Missionary Sister of Mary",
+    ordinationDate: "29.04.1996",
+    contact: "24.12.1966",
+  },
+  {
+    id: 5,
+    image: Jayanthi,
+    name: "Sr.A. Jayanthi, FSJ",
+    congregation: "Franciscan Sisters of St. Joseph (FSJ)",
+    ordinationDate: "23.04.2003",
+    contact: "23.08.1983",
+  },
+{
+    id: 6,
+    image: MariyaSarpirasatham,
+    name: "Sr.Mariya Sarpirasatham",
+    congregation: "Sisters of St.Francis of Assisi.",
+    ordinationDate: "10.05.1987",
+    contact: "01.10.1965",
+  },{
+    id: 7,
+    image: AvilaTheresa,
+    name: "Sr.D. Avila Theresa, FSJ",
+    congregation: "Franciscan Sisters of St. Joseph (FSJ)",
+    ordinationDate: "23.04.2003",
+    contact: "01.10.1982",
+  },
+  {
+    id: 8,
+    image: JennateRani,
+    name: "Sr.M. Jennate Rani",
+    congregation: "Cluny.",
+    ordinationDate: "",
+    contact: "29.06.1983",
+  },{
+    id: 8,
+    image: imagesProfile,
+    name: "Sr.X. John of Ark",
+    congregation: "Franciscan Sisters of St. Joseph (FSJ)",
+    ordinationDate: "04.05..1999",
+    contact: "27.05.1980",
+  },{
+    id: 9,
+    image: AmirthamJuli,
+    name: "Sr.D. Amirtham Juli",
+    congregation: "Society Sisters of St.Anne, Madavaram (SSAM)",
+    ordinationDate: "02.05.2010",
+    contact: "10.11.1989",
+  },{
+    id: 10,
+    image: PushpaLatha,
+    name: "Sr.Pushpa Latha",
+    congregation: "SCB",
+    ordinationDate: "05.05.2009",
+    contact: "05.05.1988",
+  },
+  
 ];
 
 function Header() {
@@ -477,7 +590,7 @@ function Home() {
               title="Church History"
               text="Walk through the important milestones that shaped our parish community."
               to="/church-history"
-              image="https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=1200&q=80"
+              image={ChurchPic}
             />
 
             <FeatureCard
@@ -1112,363 +1225,521 @@ function Timeline({items}) {
   return <section className="section timeline-section soft"><div className="container"><SectionTitle eyebrow="Timeline" title="Milestones along the journey" center/><div className="timeline">{items.map(([year,text])=><div className="timeline-item" key={year}><div className="timeline-year">{year}</div><div className="timeline-dot"/><div className="timeline-text"><p>{text}</p></div></div>)}</div></div></section>;
 }
 
+// function ChurchHistory() {
+//   return (
+//     <>
+//       <PageHero
+//         eyebrow="Our Story • எங்கள் வரலாறு"
+//         title="Theresapuram Parish History"
+//         text="A journey of faith, missionary service, community growth and pastoral dedication."
+//         image={ChurchPic}
+//       />
+
+//       {/* =====================================================
+//           HISTORICAL INTRODUCTION
+//       ===================================================== */}
+
+//       <section className="section">
+//         <div className="container narrow">
+//           <SectionTitle
+//             eyebrow="The Beginning • தொடக்கம்"
+//             title="From a forest to a parish community"
+//             text="காட்டுப்பகுதியிலிருந்து ஒரு பங்குச் சமூகமாக"
+//             center
+//           />
+
+//           <div className="history-story">
+//             <p>
+//               The place where Theresapuram is situated today was once a
+//               forest. A great Indian missionary, Fr. S. Paul, developed
+//               the area into a village and built a chapel for the growing
+//               Catholic community.
+//             </p>
+
+//             <p className="tamil-text">
+//               இன்று தேரேசாபுரம் அமைந்துள்ள பகுதி ஒரு காலத்தில்
+//               காடாக இருந்தது. சிறந்த இந்திய மறைபணியாளர் அருட்தந்தை
+//               எஸ். பால் அவர்கள் இப்பகுதியை ஒரு கிராமமாக வளர்ச்சியடையச்
+//               செய்து, வளர்ந்து வந்த கத்தோலிக்க மக்களுக்காக ஒரு
+//               சிற்றாலயத்தையும் கட்டினார்.
+//             </p>
+
+//             <p>
+//               His successors continued to give attention to the spiritual
+//               and material development of the village. Observing its
+//               steady and rapid growth, Bishop David Marianayagam made
+//               Theresapuram a Parish in 1958.
+//             </p>
+
+//             <p className="tamil-text">
+//               அவரது பின்வந்தவர்கள் கிராமத்தின் ஆன்மீக மற்றும் பொருளாதார
+//               வளர்ச்சிக்கு தொடர்ந்து கவனம் செலுத்தினர். கிராமத்தின்
+//               நிலையான மற்றும் வேகமான வளர்ச்சியை கருத்தில் கொண்டு,
+//               ஆயர் டேவிட் மரியநாயகம் அவர்கள் 1958 ஆம் ஆண்டு
+//               தேரேசாபுரத்தை பங்காக நிறுவினார்.
+//             </p>
+//           </div>
+//         </div>
+//       </section>
+
+
+//       {/* =====================================================
+//           FR S PAUL
+//       ===================================================== */}
+
+//       <section className="section soft">
+//         <div className="container detail-grid">
+//           <div className="history-photo-card">
+//             <div className="history-photo-placeholder">
+//               {/* <Cross size={42} /> */}
+//               <img src={FounderPic} alt="FounderPic"/><br/>
+//               <span>Fr. S. Paul</span><br />
+//               <small>Missionary Priest</small>
+//             </div>
+//           </div>
+
+//           <div>
+//             <SectionTitle
+//               eyebrow="Missionary Pioneer • மறைபணியின் முன்னோடி"
+//               title="Rev. Fr. S. Paul"
+//               text="The missionary who helped lay the foundation of Theresapuram."
+//             />
+
+//             <div className="info-list">
+//               <div>
+//                 <strong>Born</strong>
+//                 <span>24 October 1882</span>
+//               </div>
+
+//               <div>
+//                 <strong>Birthplace</strong>
+//                 <span>Chetpet</span>
+//               </div>
+
+//               <div>
+//                 <strong>Baptized</strong>
+//                 <span>2 November 1882</span>
+//               </div>
+
+//               <div>
+//                 <strong>Tonsure</strong>
+//                 <span>16 October 1905</span>
+//               </div>
+
+//               <div>
+//                 <strong>Minor Orders</strong>
+//                 <span>18 October 1906</span>
+//               </div>
+
+//               <div>
+//                 <strong>Sub-Deacon</strong>
+//                 <span>15 October 1907</span>
+//               </div>
+
+//               <div>
+//                 <strong>Deacon</strong>
+//                 <span>19 October 1908</span>
+//               </div>
+
+//               <div>
+//                 <strong>Ordained Priest</strong>
+//                 <span>21 October 1909</span>
+//               </div>
+
+//               <div>
+//                 <strong>Died</strong>
+//                 <span>22 September 1969</span>
+//               </div>
+
+//               <div>
+//                 <strong>Buried</strong>
+//                 <span>23 September 1969 near the Cathedral</span>
+//               </div>
+//             </div>
+
+//             <p>
+//               Following the example of Fr. Darras, Fr. S. Paul spent much
+//               of his life looking after poor new Christians. His missionary
+//               service helped develop communities and strengthen Catholic
+//               life in several places.
+//             </p>
+
+//             <p className="tamil-text">
+//               அருட்தந்தை தார்ராஸ் அவர்களின் முன்மாதிரியைப் பின்பற்றி,
+//               அருட்தந்தை எஸ். பால் அவர்கள் ஏழை மற்றும் புதிய கிறிஸ்தவ
+//               மக்களின் நலனில் அதிக அக்கறை கொண்டிருந்தார். அவரது
+//               மறைபணி பல இடங்களில் கிறிஸ்தவ சமூகங்களின் வளர்ச்சிக்கும்
+//               கத்தோலிக்க விசுவாச வாழ்க்கையின் வலிமைக்கும் உதவியது.
+//             </p>
+//           </div>
+//         </div>
+//       </section>
+
+
+//       {/* =====================================================
+//           PARISH DEVELOPMENTS
+//       ===================================================== */}
+
+//       <section className="section">
+//         <div className="container">
+//           <SectionTitle
+//             eyebrow="Parish Development • பங்கு வளர்ச்சி"
+//             title="Institutions and developments"
+//             text="The parish grew spiritually, socially and educationally through several institutions."
+//             center
+//           />
+
+//           <div className="cards four">
+//             {theresapuramDevelopments.map((item, index) => (
+//               <article className="card" key={item.title}>
+//                 <span className="number">
+//                   {String(index + 1).padStart(2, "0")}
+//                 </span>
+
+//                 <h3>{item.title}</h3>
+
+//                 <h4>{item.tamil}</h4>
+
+//                 <span className="eyebrow">
+//                   {item.year}
+//                 </span>
+
+//                 <p>
+//                   <strong>English:</strong>{" "}
+//                   {item.description}
+//                 </p>
+
+//                 <p className="tamil-text">
+//                   <strong>தமிழ்:</strong>{" "}
+//                   {item.tamilDescription}
+//                 </p>
+//               </article>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+
+
+//       {/* =====================================================
+//           PARISH PRIESTS
+//       ===================================================== */}
+
+//       <section className="section soft">
+//         <div className="container">
+//           <SectionTitle
+//             eyebrow="Parish Priests • பங்குத்தந்தையர்கள்"
+//             title="Priests who served Theresapuram"
+//             text="The priests who carried forward the pastoral mission of the parish."
+//             center
+//           />
+
+//           <div className="clergy-history-list">
+//             {theresapuramPriests.map((priest, index) => (
+//               <article
+//                 className="clergy-history-card"
+//                 key={priest.id}
+//               >
+//                 <div className="clergy-history-number">
+//                   {String(index + 1).padStart(2, "0")}
+//                 </div>
+
+//                 <div className="clergy-history-content">
+//                   <span className="eyebrow">
+//                     {priest.period}
+//                   </span>
+
+//                   <h3>{priest.name}</h3>
+
+//                   <h4>{priest.role}</h4>
+
+//                   <p>
+//                     <strong>English:</strong>{" "}
+//                     {priest.contribution}
+//                   </p>
+
+//                   <p className="tamil-text">
+//                     <strong>தமிழ்:</strong>{" "}
+//                     {priest.contributionTamil}
+//                   </p>
+
+//                   <ul>
+//                     {priest.details.map(detail => (
+//                       <li key={detail}>{detail}</li>
+//                     ))}
+//                   </ul>
+//                 </div>
+//               </article>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+
+
+//       {/* =====================================================
+//           BISHOPS
+//       ===================================================== */}
+
+//       {/* <section className="section">
+//         <div className="container">
+//           <SectionTitle
+//             eyebrow="Diocese of Vellore • வேலூர் மறைமாவட்டம்"
+//             title="Bishops who served the Diocese of Vellore"
+//             text="A historical record of the bishops connected with the growth of the Diocese and its parishes."
+//             center
+//           />
+
+//           <div className="bishop-grid">
+//             {velloreBishops.map((bishop, index) => (
+//               <article className="bishop-card" key={bishop.id}>
+//                 <span className="number">
+//                   {String(index + 1).padStart(2, "0")}
+//                 </span>
+
+//                 <h3>{bishop.name}</h3>
+
+//                 <span className="bishop-role">
+//                   {bishop.role}
+//                 </span>
+
+//                 <p>{bishop.contribution}</p>
+//               </article>
+//             ))}
+//           </div>
+
+//           <div className="history-note">
+//             <Cross size={24} />
+
+//             <div>
+//               <h3>Historical record</h3>
+
+//               <p>
+//                 The complete succession of Bishops of the Diocese of
+//                 Vellore should be added from the official diocesan
+//                 historical records so that every name and period is
+//                 accurately represented.
+//               </p>
+
+//               <p className="tamil-text">
+//                 வேலூர் மறைமாவட்டத்தின் அனைத்து ஆயர்களின் பெயர்கள் மற்றும்
+//                 பணிக்காலங்கள் அதிகாரப்பூர்வ மறைமாவட்ட வரலாற்றுப்
+//                 பதிவுகளிலிருந்து சரிபார்க்கப்பட்டு இப்பக்கத்தில்
+//                 சேர்க்கப்பட வேண்டும்.
+//               </p>
+//             </div>
+//           </div>
+//         </div>
+//       </section> */}
+
+
+//       {/* =====================================================
+//           LEGACY
+//       ===================================================== */}
+
+//       <section className="section soft">
+//         <div className="container">
+//           <SectionTitle
+//             eyebrow="Our Legacy • எங்கள் மரபு"
+//             title="A parish built through faith and service"
+//             text="விசுவாசத்தாலும் சேவையாலும் கட்டியெழுப்பப்பட்ட பங்கு"
+//             center
+//           />
+
+//           <div className="legacy-grid">
+//             <div>
+//               <span>01</span>
+//               <h3>Faith</h3>
+//               <p>
+//                 Building a strong Catholic community through prayer,
+//                 pastoral care and spiritual formation.
+//               </p>
+//               <p className="tamil-text">
+//                 ஜெபம், ஆன்மீக பராமரிப்பு மற்றும் விசுவாச வளர்ச்சியின்
+//                 மூலம் வலுவான கத்தோலிக்க சமூகத்தை உருவாக்குதல்.
+//               </p>
+//             </div>
+
+//             <div>
+//               <span>02</span>
+//               <h3>Education</h3>
+//               <p>
+//                 Supporting children and young people through education
+//                 and formation.
+//               </p>
+//               <p className="tamil-text">
+//                 கல்வி மற்றும் நல்லொழுக்க வளர்ச்சியின் மூலம் குழந்தைகள்
+//                 மற்றும் இளைஞர்களை முன்னேற்றுதல்.
+//               </p>
+//             </div>
+
+//             <div>
+//               <span>03</span>
+//               <h3>Service</h3>
+//               <p>
+//                 Serving the elderly, the poor and the wider community.
+//               </p>
+//               <p className="tamil-text">
+//                 முதியோர், ஏழைகள் மற்றும் பரந்த சமூகத்திற்கு சேவை செய்தல்.
+//               </p>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+//     </>
+//   );
+// }
+
 function ChurchHistory() {
   return (
     <>
       <PageHero
         eyebrow="Our Story • எங்கள் வரலாறு"
-        title="Theresapuram Parish History"
-        text="A journey of faith, missionary service, community growth and pastoral dedication."
+        title="Church History"
+        text="A journey of faith, service and generations of parish life."
         image={ChurchPic}
       />
 
-      {/* =====================================================
-          HISTORICAL INTRODUCTION
-      ===================================================== */}
-
+      {/* Parish Introduction */}
       <section className="section">
         <div className="container narrow">
           <SectionTitle
-            eyebrow="The Beginning • தொடக்கம்"
-            title="From a forest to a parish community"
-            text="காட்டுப்பகுதியிலிருந்து ஒரு பங்குச் சமூகமாக"
-            center
+            eyebrow="From a small beginning • ஒரு சிறிய தொடக்கத்திலிருந்து"
+            title="A heritage built by many hands"
+            text="பலரின் அர்ப்பணிப்பால் உருவான பாரம்பரியம்"
           />
 
-          <div className="history-story">
-            <p>
-              The place where Theresapuram is situated today was once a
-              forest. A great Indian missionary, Fr. S. Paul, developed
-              the area into a village and built a chapel for the growing
-              Catholic community.
-            </p>
+          <p>
+            Our parish has grown through the dedication, prayer and service
+            of many priests, religious people and parishioners. Each
+            generation has contributed to the spiritual and social growth
+            of Theresapuram Parish.
+          </p>
 
-            <p className="tamil-text">
-              இன்று தேரேசாபுரம் அமைந்துள்ள பகுதி ஒரு காலத்தில்
-              காடாக இருந்தது. சிறந்த இந்திய மறைபணியாளர் அருட்தந்தை
-              எஸ். பால் அவர்கள் இப்பகுதியை ஒரு கிராமமாக வளர்ச்சியடையச்
-              செய்து, வளர்ந்து வந்த கத்தோலிக்க மக்களுக்காக ஒரு
-              சிற்றாலயத்தையும் கட்டினார்.
-            </p>
-
-            <p>
-              His successors continued to give attention to the spiritual
-              and material development of the village. Observing its
-              steady and rapid growth, Bishop David Marianayagam made
-              Theresapuram a Parish in 1958.
-            </p>
-
-            <p className="tamil-text">
-              அவரது பின்வந்தவர்கள் கிராமத்தின் ஆன்மீக மற்றும் பொருளாதார
-              வளர்ச்சிக்கு தொடர்ந்து கவனம் செலுத்தினர். கிராமத்தின்
-              நிலையான மற்றும் வேகமான வளர்ச்சியை கருத்தில் கொண்டு,
-              ஆயர் டேவிட் மரியநாயகம் அவர்கள் 1958 ஆம் ஆண்டு
-              தேரேசாபுரத்தை பங்காக நிறுவினார்.
-            </p>
-          </div>
+          <p className="tamil-text">
+            பல அருட்தந்தையர்கள், துறவியர்கள் மற்றும் பங்கு மக்களின்
+            அர்ப்பணிப்பு, ஜெபம் மற்றும் சேவையின் மூலம் எங்கள் பங்கு
+            வளர்ச்சியடைந்துள்ளது. ஒவ்வொரு தலைமுறையும் தேரேசாபுரம் பங்கின்
+            ஆன்மீக மற்றும் சமூக வளர்ச்சிக்கு தங்களது பங்களிப்பை
+            வழங்கியுள்ளது.
+          </p>
         </div>
       </section>
 
+      {/* Existing Timeline */}
+      <Timeline items={churchTimeline} />
 
-      {/* =====================================================
-          FR S PAUL
-      ===================================================== */}
-
-      <section className="section soft">
-        <div className="container detail-grid">
-          <div className="history-photo-card">
-            <div className="history-photo-placeholder">
-              {/* <Cross size={42} /> */}
-              <img src={FounderPic} alt="FounderPic"/><br/>
-              <span>Fr. S. Paul</span><br />
-              <small>Missionary Priest</small>
-            </div>
-          </div>
-
-          <div>
-            <SectionTitle
-              eyebrow="Missionary Pioneer • மறைபணியின் முன்னோடி"
-              title="Rev. Fr. S. Paul"
-              text="The missionary who helped lay the foundation of Theresapuram."
-            />
-
-            <div className="info-list">
-              <div>
-                <strong>Born</strong>
-                <span>24 October 1882</span>
-              </div>
-
-              <div>
-                <strong>Birthplace</strong>
-                <span>Chetpet</span>
-              </div>
-
-              <div>
-                <strong>Baptized</strong>
-                <span>2 November 1882</span>
-              </div>
-
-              <div>
-                <strong>Tonsure</strong>
-                <span>16 October 1905</span>
-              </div>
-
-              <div>
-                <strong>Minor Orders</strong>
-                <span>18 October 1906</span>
-              </div>
-
-              <div>
-                <strong>Sub-Deacon</strong>
-                <span>15 October 1907</span>
-              </div>
-
-              <div>
-                <strong>Deacon</strong>
-                <span>19 October 1908</span>
-              </div>
-
-              <div>
-                <strong>Ordained Priest</strong>
-                <span>21 October 1909</span>
-              </div>
-
-              <div>
-                <strong>Died</strong>
-                <span>22 September 1969</span>
-              </div>
-
-              <div>
-                <strong>Buried</strong>
-                <span>23 September 1969 near the Cathedral</span>
-              </div>
-            </div>
-
-            <p>
-              Following the example of Fr. Darras, Fr. S. Paul spent much
-              of his life looking after poor new Christians. His missionary
-              service helped develop communities and strengthen Catholic
-              life in several places.
-            </p>
-
-            <p className="tamil-text">
-              அருட்தந்தை தார்ராஸ் அவர்களின் முன்மாதிரியைப் பின்பற்றி,
-              அருட்தந்தை எஸ். பால் அவர்கள் ஏழை மற்றும் புதிய கிறிஸ்தவ
-              மக்களின் நலனில் அதிக அக்கறை கொண்டிருந்தார். அவரது
-              மறைபணி பல இடங்களில் கிறிஸ்தவ சமூகங்களின் வளர்ச்சிக்கும்
-              கத்தோலிக்க விசுவாச வாழ்க்கையின் வலிமைக்கும் உதவியது.
-            </p>
-          </div>
-        </div>
-      </section>
-
-
-      {/* =====================================================
-          PARISH DEVELOPMENTS
-      ===================================================== */}
-
-      <section className="section">
+      {/* Fathers Section */}
+      <section className="section soft parish-fathers-section">
         <div className="container">
-          <SectionTitle
-            eyebrow="Parish Development • பங்கு வளர்ச்சி"
-            title="Institutions and developments"
-            text="The parish grew spiritually, socially and educationally through several institutions."
-            center
-          />
 
-          <div className="cards four">
-            {theresapuramDevelopments.map((item, index) => (
-              <article className="card" key={item.title}>
-                <span className="number">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-
-                <h3>{item.title}</h3>
-
-                <h4>{item.tamil}</h4>
-
-                <span className="eyebrow">
-                  {item.year}
-                </span>
-
-                <p>
-                  <strong>English:</strong>{" "}
-                  {item.description}
-                </p>
-
-                <p className="tamil-text">
-                  <strong>தமிழ்:</strong>{" "}
-                  {item.tamilDescription}
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
-      {/* =====================================================
-          PARISH PRIESTS
-      ===================================================== */}
-
-      <section className="section soft">
-        <div className="container">
           <SectionTitle
             eyebrow="Parish Priests • பங்குத்தந்தையர்கள்"
-            title="Priests who served Theresapuram"
-            text="The priests who carried forward the pastoral mission of the parish."
+            title="Fathers Who Served in Theresapuram Parish"
+            text="தேரேசாபுரம் பங்கில் பணியாற்றிய அருட்தந்தையர்கள்"
             center
           />
 
-          <div className="clergy-history-list">
-            {theresapuramPriests.map((priest, index) => (
+          <div className="parish-fathers-list">
+            {parishFathers.map((father, index) => (
               <article
-                className="clergy-history-card"
-                key={priest.id}
+                className="parish-father-row"
+                key={father.id}
               >
-                <div className="clergy-history-number">
-                  {String(index + 1).padStart(2, "0")}
-                </div>
 
-                <div className="clergy-history-content">
-                  <span className="eyebrow">
-                    {priest.period}
+                {/* Tamil Card */}
+                <div className="parish-father-card tamil-card">
+
+                  <span className="father-number">
+                    {String(index + 1).padStart(2, "0")}
                   </span>
 
-                  <h3>{priest.name}</h3>
+                  <div className="father-card-content">
 
-                  <h4>{priest.role}</h4>
+                    <div className="father-year">
+                      {father.year}
+                    </div>
 
-                  <p>
-                    <strong>English:</strong>{" "}
-                    {priest.contribution}
-                  </p>
+                    <h3>
+                      {father.tamilName}
+                    </h3>
 
-                  <p className="tamil-text">
-                    <strong>தமிழ்:</strong>{" "}
-                    {priest.contributionTamil}
-                  </p>
+                    {father.tamilWork && (
+                      <p>
+                        {father.tamilWork}
+                      </p>
+                    )}
 
-                  <ul>
-                    {priest.details.map(detail => (
-                      <li key={detail}>{detail}</li>
-                    ))}
-                  </ul>
+                  </div>
                 </div>
+
+                {/* English Card */}
+                <div className="parish-father-card english-card">
+
+                  <span className="father-number">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+
+                  <div className="father-card-content">
+
+                    <div className="father-year">
+                      {father.year}
+                    </div>
+
+                    <h3>
+                      {father.name}
+                    </h3>
+
+                    {father.work && (
+                      <p>
+                        {father.work}
+                      </p>
+                    )}
+
+                  </div>
+                </div>
+
               </article>
             ))}
           </div>
+
         </div>
       </section>
 
+      {/* History Closing Section */}
+      <section className="section">
+        <div className="container split history-callout">
 
-      {/* =====================================================
-          BISHOPS
-      ===================================================== */}
+          <div>
+            <span className="eyebrow">
+              Preserving our memory • நமது நினைவுகளைப் பாதுகாத்தல்
+            </span>
 
-      {/* <section className="section">
-        <div className="container">
-          <SectionTitle
-            eyebrow="Diocese of Vellore • வேலூர் மறைமாவட்டம்"
-            title="Bishops who served the Diocese of Vellore"
-            text="A historical record of the bishops connected with the growth of the Diocese and its parishes."
-            center
+            <h2>
+              History is more than dates.
+            </h2>
+
+            <h3 className="tamil-heading">
+              வரலாறு என்பது தேதிகள் மட்டுமல்ல.
+            </h3>
+
+            <p>
+              The history of Theresapuram Parish is carried through the
+              people who prayed, served, taught, guided and built the
+              community throughout the years.
+            </p>
+
+            <p className="tamil-text">
+              தேரேசாபுரம் பங்கின் வரலாறு என்பது ஆண்டுகள் மற்றும் தேதிகள்
+              மட்டுமல்ல. பல ஆண்டுகளாக இங்கு ஜெபித்தவர்கள், பணியாற்றியவர்கள்,
+              கற்பித்தவர்கள், வழிநடத்தியவர்கள் மற்றும் சமூகத்தை உருவாக்கிய
+              மக்களின் வாழ்க்கையிலும் சேவையிலும் அது தொடர்கிறது.
+            </p>
+          </div>
+
+          <img
+            src={ChurchPic}
+            alt="Church interior"
           />
 
-          <div className="bishop-grid">
-            {velloreBishops.map((bishop, index) => (
-              <article className="bishop-card" key={bishop.id}>
-                <span className="number">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-
-                <h3>{bishop.name}</h3>
-
-                <span className="bishop-role">
-                  {bishop.role}
-                </span>
-
-                <p>{bishop.contribution}</p>
-              </article>
-            ))}
-          </div>
-
-          <div className="history-note">
-            <Cross size={24} />
-
-            <div>
-              <h3>Historical record</h3>
-
-              <p>
-                The complete succession of Bishops of the Diocese of
-                Vellore should be added from the official diocesan
-                historical records so that every name and period is
-                accurately represented.
-              </p>
-
-              <p className="tamil-text">
-                வேலூர் மறைமாவட்டத்தின் அனைத்து ஆயர்களின் பெயர்கள் மற்றும்
-                பணிக்காலங்கள் அதிகாரப்பூர்வ மறைமாவட்ட வரலாற்றுப்
-                பதிவுகளிலிருந்து சரிபார்க்கப்பட்டு இப்பக்கத்தில்
-                சேர்க்கப்பட வேண்டும்.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-
-      {/* =====================================================
-          LEGACY
-      ===================================================== */}
-
-      <section className="section soft">
-        <div className="container">
-          <SectionTitle
-            eyebrow="Our Legacy • எங்கள் மரபு"
-            title="A parish built through faith and service"
-            text="விசுவாசத்தாலும் சேவையாலும் கட்டியெழுப்பப்பட்ட பங்கு"
-            center
-          />
-
-          <div className="legacy-grid">
-            <div>
-              <span>01</span>
-              <h3>Faith</h3>
-              <p>
-                Building a strong Catholic community through prayer,
-                pastoral care and spiritual formation.
-              </p>
-              <p className="tamil-text">
-                ஜெபம், ஆன்மீக பராமரிப்பு மற்றும் விசுவாச வளர்ச்சியின்
-                மூலம் வலுவான கத்தோலிக்க சமூகத்தை உருவாக்குதல்.
-              </p>
-            </div>
-
-            <div>
-              <span>02</span>
-              <h3>Education</h3>
-              <p>
-                Supporting children and young people through education
-                and formation.
-              </p>
-              <p className="tamil-text">
-                கல்வி மற்றும் நல்லொழுக்க வளர்ச்சியின் மூலம் குழந்தைகள்
-                மற்றும் இளைஞர்களை முன்னேற்றுதல்.
-              </p>
-            </div>
-
-            <div>
-              <span>03</span>
-              <h3>Service</h3>
-              <p>
-                Serving the elderly, the poor and the wider community.
-              </p>
-              <p className="tamil-text">
-                முதியோர், ஏழைகள் மற்றும் பரந்த சமூகத்திற்கு சேவை செய்தல்.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
     </>
@@ -1821,146 +2092,20 @@ function FounderHistory() {
   );
 }
 
-// function FathersSisters() {
-//   const [query, setQuery] = useState("");
-
-//   const filtered = theresapuramBornClergy.filter(person =>
-//     `${person.name} ${person.type} ${person.congregation} ${person.currentMinistry}`
-//       .toLowerCase()
-//       .includes(query.toLowerCase())
-//   );
-
-//   return (
-//     <>
-//       <PageHero
-//         eyebrow="Our Vocation • எங்கள் அழைப்பு"
-//         title="Fathers & Sisters"
-//         text="Fathers and sisters born in Theresapuram who continue to serve the Church."
-//         image="https://images.unsplash.com/photo-1473177104440-ffee2f376098?auto=format&fit=crop&w=1800&q=85"
-//       />
-
-//       <section className="section">
-//         <div className="container">
-
-//           <SectionTitle
-//             eyebrow="Theresapuram Vocations"
-//             title="Fathers & Sisters born in Theresapuram"
-//             text="தேரேசாபுரத்தில் பிறந்து திருச்சபைக்கு அர்ப்பணிப்புடன் பணியாற்றும் அருட்தந்தையர்கள் மற்றும் அருட்சகோதரிகள்."
-//             center
-//           />
-
-//           <div className="directory-head">
-//             <div>
-//               <h3>Vocation Directory</h3>
-//               <p>
-//                 Search the fathers and sisters who were born in
-//                 Theresapuram.
-//               </p>
-//             </div>
-
-//             <input
-//               value={query}
-//               onChange={e => setQuery(e.target.value)}
-//               placeholder="Search by name, congregation or ministry…"
-//               aria-label="Search fathers and sisters"
-//             />
-//           </div>
-
-//           {filtered.length > 0 ? (
-//             <div className="vocation-grid">
-//               {filtered.map(person => (
-//                 <article
-//                   className="vocation-card"
-//                   key={person.id}
-//                 >
-//                   <div className="vocation-icon">
-//                     <Cross size={28} />
-//                   </div>
-
-//                   <span className="eyebrow">
-//                     {person.type}
-//                   </span>
-
-//                   <h3>{person.name}</h3>
-
-//                   <div className="vocation-details">
-
-//                     <div>
-//                       <strong>Congregation</strong>
-//                       <span>
-//                         {person.congregation}
-//                       </span>
-//                     </div>
-
-//                     <div>
-//                       <strong>Born</strong>
-//                       <span>
-//                         {person.birthPlace}
-//                       </span>
-//                     </div>
-
-//                     <div>
-//                       <strong>Ordination / Profession</strong>
-//                       <span>
-//                         {person.ordinationDate}
-//                       </span>
-//                     </div>
-
-//                     <div>
-//                       <strong>Current Ministry</strong>
-//                       <span>
-//                         {person.currentMinistry}
-//                       </span>
-//                     </div>
-
-//                     <div>
-//                       <strong>Contact</strong>
-//                       <a href={`tel:${person.contact}`}>
-//                         <Phone size={15} />
-//                         {person.contact}
-//                       </a>
-//                     </div>
-
-//                   </div>
-//                 </article>
-//               ))}
-//             </div>
-//           ) : (
-//             <div className="vocation-empty">
-//               <Cross size={30} />
-
-//               <h3>
-//                 Father & Sister records will be added here
-//               </h3>
-
-//               <p>
-//                 The directory is ready for the verified names,
-//                 congregations, ordination dates, current ministries
-//                 and contact details of Theresapuram-born fathers
-//                 and sisters.
-//               </p>
-
-//               <p className="tamil-text">
-//                 தேரேசாபுரத்தில் பிறந்த அருட்தந்தையர்கள் மற்றும்
-//                 அருட்சகோதரிகளின் சரிபார்க்கப்பட்ட பெயர்கள்,
-//                 சபைகள், திருநிலைப்படுத்தப்பட்ட தேதிகள், தற்போதைய
-//                 பணியிடங்கள் மற்றும் தொடர்பு விவரங்கள் இங்கே
-//                 சேர்க்கப்படும்.
-//               </p>
-//             </div>
-//           )}
-
-//         </div>
-//       </section>
-//     </>
-//   );
-// }
 
 function FathersSisters() {
   const [query, setQuery] = useState("");
 
-  const filtered = theresapuramBornClergy.filter(person =>
-    `${person.name} ${person.type} ${person.congregation} ${person.currentMinistry}`
+  // Search Fathers
+  const filteredFathers = theresapuramFathers.filter((person) =>
+    `${person.name} ${person.type} ${person.congregation} ${person.currentMinistry || ""}`
+      .toLowerCase()
+      .includes(query.toLowerCase())
+  );
+
+  // Search Sisters
+  const filteredSisters = theresapuramSisters.filter((person) =>
+    `${person.name} ${person.type} ${person.congregation} ${person.currentMinistry || ""}`
       .toLowerCase()
       .includes(query.toLowerCase())
   );
@@ -1971,7 +2116,7 @@ function FathersSisters() {
         eyebrow="Our Vocation • எங்கள் அழைப்பு"
         title="Fathers & Sisters"
         text="Fathers and sisters born in Theresapuram who continue to serve the Church."
-        image="https://images.unsplash.com/photo-1473177104440-ffee2f376098?auto=format&fit=crop&w=1800&q=85"
+        image={ChurchPic}
       />
 
       <section className="section vocation-section">
@@ -1984,8 +2129,12 @@ function FathersSisters() {
             center
           />
 
-          {/* Search Header */}
+          {/* ============================= */}
+          {/* SEARCH HEADER */}
+          {/* ============================= */}
+
           <div className="directory-head">
+
             <div className="directory-heading">
               <span className="eyebrow">
                 Vocation Directory
@@ -2005,139 +2154,311 @@ function FathersSisters() {
               <input
                 type="text"
                 value={query}
-                onChange={e => setQuery(e.target.value)}
+                onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search by name, congregation or ministry…"
                 aria-label="Search fathers and sisters"
               />
             </div>
+
           </div>
 
-          {/* Cards */}
-          {filtered.length > 0 ? (
-            <div className="vocation-grid">
 
-              {filtered.map(person => (
-                <article
-                  className="vocation-card"
-                  key={person.id}
-                >
+          {/* ===================================== */}
+          {/* FATHERS SECTION */}
+          {/* ===================================== */}
 
-                  {/* Person Image */}
-                  <div className="vocation-image">
-                    {person.image ? (
-                      <img
-                        src={person.image}
-                        alt={person.name}
-                      />
-                    ) : (
-                      <div className="vocation-image-placeholder">
-                        <Cross size={32} />
-                      </div>
-                    )}
-                  </div>
+          <div className="vocation-category">
 
-                  {/* Card Content */}
-                  <div className="vocation-card-content">
+            <div className="vocation-category-header">
 
-                    <span className="eyebrow">
-                      {person.type}
-                    </span>
+              <div>
+                <span className="eyebrow">
+                  Clergy • அருட்தந்தையர்கள்
+                </span>
 
-                    <h3>
-                      {person.name}
-                    </h3>
+                <h2>
+                  Fathers
+                </h2>
 
-                    <div className="vocation-details">
+                <p>
+                  Fathers born in Theresapuram who serve the Church.
+                </p>
+              </div>
 
-                      <div className="vocation-detail">
-                        <strong>
-                          Congregation
-                        </strong>
+              {/* <div className="vocation-count">
+                {filteredFathers.length} Fathers
+              </div> */}
 
-                        <span>
-                          {person.congregation}
-                        </span>
-                      </div>
+            </div>
 
-                      <div className="vocation-detail">
-                        <strong>
-                          Born
-                        </strong>
 
-                        <span>
-                          {person.birthPlace}
-                        </span>
-                      </div>
+            {filteredFathers.length > 0 ? (
 
-                      <div className="vocation-detail">
-                        <strong>
-                          Ordination / Profession
-                        </strong>
+              <div className="vocation-grid">
 
-                        <span>
-                          {person.ordinationDate}
-                        </span>
-                      </div>
+                {filteredFathers.map((person) => (
 
-                      <div className="vocation-detail">
-                        <strong>
-                          Current Ministry
-                        </strong>
+                  <article
+                    className="vocation-card"
+                    key={`father-${person.id}`}
+                  >
 
-                        <span>
-                          {person.currentMinistry}
-                        </span>
-                      </div>
+                    {/* Image */}
+                    <div className="vocation-image">
 
-                      {person.contact && (
-                        <div className="vocation-detail">
-                          <strong>
-                            Contact
-                          </strong>
+                      {person.image ? (
 
-                          <a
-                            href={`tel:${person.contact}`}
-                            className="vocation-contact"
-                          >
-                            <Phone size={15} />
-                            {person.contact}
-                          </a>
+                        <img
+                          src={person.image}
+                          alt={person.name}
+                        />
+
+                      ) : (
+
+                        <div className="vocation-image-placeholder">
+                          <Cross size={32} />
                         </div>
+
                       )}
 
                     </div>
-                  </div>
 
-                </article>
-              ))}
 
-            </div>
-          ) : (
-            <div className="vocation-empty">
-              <div className="vocation-empty-icon">
-                <Cross size={30} />
+                    {/* Content */}
+                    <div className="vocation-card-content">
+
+                      <span className="eyebrow">
+                        {person.type}
+                      </span>
+
+                      <h3>
+                        {person.name}
+                      </h3>
+
+
+                      <div className="vocation-details">
+
+                        <div className="vocation-detail">
+
+                          <strong>
+                            Congregation
+                          </strong>
+
+                          <span>
+                            {person.congregation}
+                          </span>
+
+                        </div>
+
+
+                        <div className="vocation-detail">
+
+                          <strong>
+                            Born
+                          </strong>
+
+                          <span>
+                            {person.contact}
+                          </span>
+
+                        </div>
+
+
+                        <div className="vocation-detail">
+
+                          <strong>
+                            Ordination
+                          </strong>
+
+                          <span>
+                            {person.ordinationDate}
+                          </span>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </article>
+
+                ))}
+
               </div>
 
-              <h3>
-                Father & Sister records will be added here
-              </h3>
+            ) : (
 
-              <p>
-                The directory is ready for the verified names,
-                congregations, ordination dates, current ministries
-                and contact details of Theresapuram-born fathers
-                and sisters.
-              </p>
+              <div className="vocation-empty">
 
-              <p className="tamil-text">
-                தேரேசாபுரத்தில் பிறந்த அருட்தந்தையர்கள் மற்றும்
-                அருட்சகோதரிகளின் சரிபார்க்கப்பட்ட பெயர்கள்,
-                சபைகள், திருநிலைப்படுத்தப்பட்ட தேதிகள், தற்போதைய
-                பணியிடங்கள் மற்றும் தொடர்பு விவரங்கள் இங்கே
-                சேர்க்கப்படும்.
-              </p>
+                <div className="vocation-empty-icon">
+                  <Cross size={30} />
+                </div>
+
+                <h3>
+                  No Father records found
+                </h3>
+
+                <p>
+                  No father matches your search.
+                </p>
+
+              </div>
+
+            )}
+
+          </div>
+
+
+          {/* ===================================== */}
+          {/* SISTERS SECTION */}
+          {/* ===================================== */}
+
+          <div className="vocation-category sisters-category">
+
+            <div className="vocation-category-header">
+
+              <div>
+                <span className="eyebrow">
+                  Religious Sisters • அருட்சகோதரிகள்
+                </span>
+
+                <h2>
+                  Sisters
+                </h2>
+
+                <p>
+                  Sisters born in Theresapuram who serve the Church
+                  through their religious vocation.
+                </p>
+              </div>
+
+              {/* <div className="vocation-count">
+                {filteredSisters.length} Sisters
+              </div> */}
+
             </div>
-          )}
+
+
+            {filteredSisters.length > 0 ? (
+
+              <div className="vocation-grid">
+
+                {filteredSisters.map((person) => (
+
+                  <article
+                    className="vocation-card"
+                    key={`sister-${person.id}`}
+                  >
+
+                    {/* Image */}
+                    <div className="vocation-image">
+
+                      {person.image ? (
+
+                        <img
+                          src={person.image}
+                          alt={person.name}
+                        />
+
+                      ) : (
+
+                        <div className="vocation-image-placeholder">
+                          <Cross size={32} />
+                        </div>
+
+                      )}
+
+                    </div>
+
+
+                    {/* Content */}
+                    <div className="vocation-card-content">
+
+                      <span className="eyebrow">
+                        {person.type}
+                      </span>
+
+                      <h3>
+                        {person.name}
+                      </h3>
+
+
+                      <div className="vocation-details">
+
+                        <div className="vocation-detail">
+
+                          <strong>
+                            Congregation
+                          </strong>
+
+                          <span>
+                            {person.congregation}
+                          </span>
+
+                        </div>
+
+
+                        <div className="vocation-detail">
+
+                          <strong>
+                            Born
+                          </strong>
+
+                          <span>
+                            {person.contact}
+                          </span>
+
+                        </div>
+
+
+                        <div className="vocation-detail">
+
+                          <strong>
+                            Profession / Ordination
+                          </strong>
+
+                          <span>
+                            {person.ordinationDate}
+                          </span>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </article>
+
+                ))}
+
+              </div>
+
+            ) : (
+
+              <div className="vocation-empty">
+
+                <div className="vocation-empty-icon">
+                  <Cross size={30} />
+                </div>
+
+                <h3>
+                  No Sister records found
+                </h3>
+
+                <p>
+                  No sister matches your search.
+                </p>
+
+                <p className="tamil-text">
+                  தேரேசாபுரத்தில் பிறந்த அருட்சகோதரிகளின்
+                  பதிவுகள் இங்கே சேர்க்கப்படும்.
+                </p>
+
+              </div>
+
+            )}
+
+          </div>
 
         </div>
       </section>
