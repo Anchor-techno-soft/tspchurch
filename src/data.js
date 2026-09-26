@@ -469,189 +469,399 @@ export const churchTimeline = [
   ["2024", "The parish launched new digital outreach and community initiatives."]
 ];
 
+// export const parishFathers = [
+//   {
+//     id: 1,
+//     year: "1921 - 1932",
+//     name: "Rev. Fr. S. Paul",
+//     tamilName: "அருட்தந்தை எஸ். பால்",
+//     work: "Founder of Theresapuram",
+//     tamilWork: "தேரேசாபுரம் திருப்பள்ளியின் நிறுவனர்",
+//   },
+//   {
+//     id: 2,
+//     year: "1932 - 1951",
+//     name: "Rev. MEP Fathers",
+//     tamilName: "எம்.இ.பி. அருட்தந்தையர்கள்",
+//     work: "MEP Fathers from the Diocese of Pondicherry served the parish.",
+//     tamilWork: "புதுச்சேரி மறைமாவட்டத்தைச் சேர்ந்த எம்.இ.பி. அருட்தந்தையர்கள் பங்கில் பணியாற்றினர்.",
+//   },
+//   {
+//     id: 3,
+//     year: "1951 - 1962",
+//     name: "Rev. Fr. Kuruwilla",
+//     tamilName: "அருட்தந்தை குருவில்லா",
+//     work: "First Parish Priest of Theresapuram.",
+//     tamilWork: "தேரேசாபுரம் பங்கின் முதல் பங்குத்தந்தையாக பணியாற்றினார்.",
+//   },
+//   {
+//     id: 4,
+//     year: "1962 - 1963",
+//     name: "Rev. Fr. M. Auguestin",
+//     tamilName: "அருட்தந்தை எம். அகஸ்டின்",
+//     work: "Served as a baptism specialist.",
+//     tamilWork: "திருமுழுக்கு பணியில் சிறப்பாக ஈடுபட்டார்.",
+//   },
+//   {
+//     id: 5,
+//     year: "1963 - 1964",
+//     name: "Rev. Fr. K. M. Sabastin",
+//     tamilName: "அருட்தந்தை கே. எம். செபஸ்தின்",
+//     work: "Served as a spiritual guide.",
+//     tamilWork: "ஆன்மீக குருவாக பணியாற்றினார்.",
+//   },
+//   {
+//     id: 6,
+//     year: "1964 - 1972",
+//     name: "Rev. Fr. S. T. Icniyesis",
+//     tamilName: "அருட்தந்தை எஸ். டி. இஞ்ஞாசியஸ்",
+//     work: "Encouraged more people to receive Baptism and motivated young people to become teachers.",
+//     tamilWork: "மேலும் பலர் திருமுழுக்கு பெற ஊக்கமளித்தார்; இளைஞர்கள் ஆசிரியர்களாக உருவாக ஊக்குவித்தார்.",
+//   },
+//   {
+//     id: 7,
+//     year: "1972 - 1974",
+//     name: "Rev. Fr. S. Antony",
+//     tamilName: "அருட்தந்தை எஸ். அந்தோணி",
+//     work: "",
+//     tamilWork: "",
+//   },
+//   {
+//     id: 8,
+//     year: "1974 - 1975",
+//     name: "Rev. Fr. S. T. Icniyesis",
+//     tamilName: "அருட்தந்தை எஸ். டி. இஞ்ஞாசியஸ்",
+//     work: "",
+//     tamilWork: "",
+//   },
+//   {
+//     id: 9,
+//     year: "1975 - 1984",
+//     name: "Rev. Fr. Thamos Kaipplly",
+//     tamilName: "அருட்தந்தை தாமஸ் கெய்ப்பள்ளி",
+//     work: "Encouraged and strengthened Christian faith.",
+//     tamilWork: "கிறிஸ்தவ நம்பிக்கையை ஊக்குவித்து வளர்த்தார்.",
+//   },
+//   {
+//     id: 10,
+//     year: "1984 - 1988",
+//     name: "Rev. Fr. Arokiya Samy",
+//     tamilName: "அருட்தந்தை ஆரோக்கியசாமி",
+//     work: "",
+//     tamilWork: "",
+//   },
+//   {
+//     id: 11,
+//     year: "1988 - 1989",
+//     name: "Rev. Fr. V. C. Joesph",
+//     tamilName: "அருட்தந்தை வி. சி. ஜோசப்",
+//     work: "",
+//     tamilWork: "",
+//   },
+//   {
+//     id: 12,
+//     year: "1989 - 1993",
+//     name: "Rev. Fr. D. F. Savari Raj",
+//     tamilName: "அருட்தந்தை டி. எப். சவேரிராஜ்",
+//     work: "",
+//     tamilWork: "",
+//   },
+//   {
+//     id: 13,
+//     year: "1993 - 1995",
+//     name: "Rev. Fr. ALB. Pushparaj",
+//     tamilName: "அருட்தந்தை ஏ.எல்.பி. புஷ்பராஜ்",
+//     work: "",
+//     tamilWork: "",
+//   },
+//   {
+//     id: 14,
+//     year: "1995 - 1998",
+//     name: "Rev. Fr. S. Malaiyyappan",
+//     tamilName: "அருட்தந்தை எஸ். மலையப்பன்",
+//     work: "Carried out various renovation works and church-related works.",
+//     tamilWork: "பல்வேறு சீரமைப்புப் பணிகளையும் ஆலயப் பணிகளையும் மேற்கொண்டார்.",
+//   },
+//   {
+//     id: 15,
+//     year: "1998 - 2005",
+//     name: "Rev. Fr. A. Motchanathan",
+//     tamilName: "அருட்தந்தை ஏ. மொட்சநாதன்",
+//     work: "",
+//     tamilWork: "",
+//   },
+//   {
+//     id: 16,
+//     year: "2005 - 2006",
+//     name: "Rev. Fr. Taikumar",
+//     tamilName: "அருட்தந்தை தைகுமார்",
+//     work: "",
+//     tamilWork: "",
+//   },
+//   {
+//     id: 17,
+//     year: "2006 - 2008",
+//     name: "Rev. Fr. Jesu Jayabalagan",
+//     tamilName: "அருட்தந்தை இயேசு ஜெயபாலகன்",
+//     work: "",
+//     tamilWork: "",
+//   },
+//   {
+//     id: 18,
+//     year: "2008 - 2010",
+//     name: "Rev. Fr. J. Jaya Prakasam",
+//     tamilName: "அருட்தந்தை ஜெ. ஜெயப்பிரகாசம்",
+//     work: "",
+//     tamilWork: "",
+//   },
+//   {
+//     id: 19,
+//     year: "2010 - 2012",
+//     name: "Rev. Fr. L. Joesph Juliean",
+//     tamilName: "அருட்தந்தை எல். ஜோசப் ஜூலியன்",
+//     work: "",
+//     tamilWork: "",
+//   },
+//   {
+//     id: 20,
+//     year: "2012 - 2017",
+//     name: "Rev. Fr. Edwin Savariyppa",
+//     tamilName: "அருட்தந்தை எட்வின் சவேரியப்பா",
+//     work: "",
+//     tamilWork: "",
+//   },
+//   {
+//     id: 21,
+//     year: "2017 - 2018",
+//     name: "Rev. Fr. N. T. Irudhayaraj",
+//     tamilName: "அருட்தந்தை என். டி. இருதயராஜ்",
+//     work: "",
+//     tamilWork: "",
+//   },
+//   {
+//     id: 22,
+//     year: "2018 - 2025",
+//     name: "L. Susainadhan",
+//     tamilName: "எல். சூசைநாதன்",
+//     work: "Developed the parish and undertook the centenary-related work.",
+//     tamilWork: "பங்கின் வளர்ச்சிக்காகப் பணியாற்றி, நூற்றாண்டு விழா தொடர்பான பணிகளை மேற்கொண்டார்.",
+//   },
+//   {
+//     id: 23,
+//     year: "2025 - Present",
+//     name: "Rev. Fr. S. James",
+//     tamilName: "அருட்தந்தை எஸ். ஜேம்ஸ்",
+//     work: "Currently serving in Theresapuram Parish.",
+//     tamilWork: "தற்போது தேரேசாபுரம் பங்கில் பணியாற்றி வருகிறார்.",
+//   },
+// ];
+
 export const parishFathers = [
   {
     id: 1,
-    year: "1921 - 1932",
+    year: "1923–1932",
     name: "Rev. Fr. S. Paul",
-    tamilName: "அருட்தந்தை எஸ். பால்",
-    work: "Founder of Theresapuram",
-    tamilWork: "தேரேசாபுரம் திருப்பள்ளியின் நிறுவனர்",
+    tamilName: "அருட்தந்தை S. பால்",
+    work: "Founder of the early parish community. He guided the first-generation Christians and built a new chapel for the growing community.",
+    tamilWork:
+      "ஊரை உருவாக்கியவர், முதல் தலைமுறை கிறிஸ்தவர்களை வழிகாட்டியவர், புதிய ஆலயம் கட்டியவர்."
   },
   {
     id: 2,
-    year: "1932 - 1951",
-    name: "Rev. MEP Fathers",
-    tamilName: "எம்.இ.பி. அருட்தந்தையர்கள்",
-    work: "MEP Fathers from the Diocese of Pondicherry served the parish.",
-    tamilWork: "புதுச்சேரி மறைமாவட்டத்தைச் சேர்ந்த எம்.இ.பி. அருட்தந்தையர்கள் பங்கில் பணியாற்றினர்.",
+    year: "1932–1951",
+    name: "MEP Missionary Fathers",
+    tamilName: "MEP சபை அருட்தந்தையர்கள்",
+    work: "During this period the parish belonged to the Archdiocese of Pondicherry. The parish was administered by the MEP missionary fathers.",
+    tamilWork:
+      "அப்போது பங்கு புதுவை உயர்மறை மாவட்டத்தில் அடங்கியிருந்தது. எனவே MEP சபை அருட்தந்தையர்களால் பங்கு இயங்கியது."
   },
   {
     id: 3,
-    year: "1951 - 1962",
-    name: "Rev. Fr. Kuruwilla",
-    tamilName: "அருட்தந்தை குருவில்லா",
-    work: "First Parish Priest of Theresapuram.",
-    tamilWork: "தேரேசாபுரம் பங்கின் முதல் பங்குத்தந்தையாக பணியாற்றினார்.",
+    year: "1952–1962",
+    name: "Rev. Fr. Kuruvilla",
+    tamilName: "அருட்தந்தை குருவிள்ளா",
+    work: "The parish became part of the Diocese of Vellore. He served as the first parish priest and built the parish priest's residence.",
+    tamilWork:
+      "பங்கு வேலூர் மறைமாவட்டத்துடன் இணைந்தது. முதல் பங்குத்தந்தையாக பணியாற்றி, பங்குத்தந்தை இல்லம் கட்டியவர்."
   },
   {
     id: 4,
-    year: "1962 - 1963",
-    name: "Rev. Fr. M. Auguestin",
-    tamilName: "அருட்தந்தை எம். அகஸ்டின்",
-    work: "Served as a baptism specialist.",
-    tamilWork: "திருமுழுக்கு பணியில் சிறப்பாக ஈடுபட்டார்.",
+    year: "1962–1963",
+    name: "Rev. Fr. M. Augustine",
+    tamilName: "அருட்தந்தை M. அகஸ்டின்",
+    work: "Worked to strengthen unity and togetherness among the people of the parish.",
+    tamilWork:
+      "மக்களின் ஒற்றுமையை வளர்த்தார்."
   },
   {
     id: 5,
-    year: "1963 - 1964",
-    name: "Rev. Fr. K. M. Sabastin",
-    tamilName: "அருட்தந்தை கே. எம். செபஸ்தின்",
-    work: "Served as a spiritual guide.",
-    tamilWork: "ஆன்மீக குருவாக பணியாற்றினார்.",
+    year: "1963–1964",
+    name: "Rev. Fr. K. M. Sebastian",
+    tamilName: "அருட்தந்தை K. M. செபாஸ்டியன்",
+    work: "Worked towards the spiritual growth and strengthening of the parish community.",
+    tamilWork:
+      "மக்களை ஆன்மீகத்தில் ஊக்குவித்தார்."
   },
   {
     id: 6,
-    year: "1964 - 1972",
-    name: "Rev. Fr. S. T. Icniyesis",
-    tamilName: "அருட்தந்தை எஸ். டி. இஞ்ஞாசியஸ்",
-    work: "Encouraged more people to receive Baptism and motivated young people to become teachers.",
-    tamilWork: "மேலும் பலர் திருமுழுக்கு பெற ஊக்கமளித்தார்; இளைஞர்கள் ஆசிரியர்களாக உருவாக ஊக்குவித்தார்.",
+    year: "1964–1972",
+    name: "Rev. Fr. S. T. Ignatius",
+    tamilName: "அருட்தந்தை S. T. இஞ்ஞாசியார்",
+    work: "A memorable servant of the parish. He strengthened catechesis, education, Christian communities and parish ministry. He also supported the agricultural and livelihood needs of the people.",
+    tamilWork:
+      "வரலாற்று காவியமானவர். மக்களுக்கு அதிகமாக திருமுழுக்கு வழங்கியவர். கல்வி, அன்பியங்கள், பங்கு பணி என அனைத்தையும் கட்டமைத்தவர். மக்களின் நிலம், ஆடு, மாடு போன்ற விவசாய தேவைகளையும் பூர்த்தி செய்தார்."
   },
   {
     id: 7,
-    year: "1972 - 1974",
-    name: "Rev. Fr. S. Antony",
-    tamilName: "அருட்தந்தை எஸ். அந்தோணி",
-    work: "",
-    tamilWork: "",
+    year: "1972–1974",
+    name: "Rev. Fr. S. Anthony",
+    tamilName: "அருட்தந்தை S. அந்தோணி",
+    work: "Served the parish during an important period. The parish golden jubilee was celebrated and the youth were encouraged to participate actively in parish life.",
+    tamilWork:
+      "முதல் இளைய குருவாக பணியாற்றினார். பங்கின் பொன்விழா கொண்டாடப்பட்டது. இளைஞர்களை ஊக்குவித்தார்."
   },
   {
     id: 8,
-    year: "1974 - 1975",
-    name: "Rev. Fr. S. T. Icniyesis",
-    tamilName: "அருட்தந்தை எஸ். டி. இஞ்ஞாசியஸ்",
-    work: "",
-    tamilWork: "",
+    year: "1974–1975",
+    name: "Rev. Fr. S. T. Ignatius",
+    tamilName: "அருட்தந்தை S. T. இஞ்ஞாசியார்",
+    work: "Returned to serve the parish again and continued encouraging spiritual reflection and faith among the people.",
+    tamilWork:
+      "இரண்டாம் முறையாக பங்குத்தந்தையாக வந்தார். மக்களிடையே ஆன்மீக சிந்தனைகளை மென்மேலும் ஊக்குவித்தார்."
   },
   {
     id: 9,
-    year: "1975 - 1984",
-    name: "Rev. Fr. Thamos Kaipplly",
-    tamilName: "அருட்தந்தை தாமஸ் கெய்ப்பள்ளி",
-    work: "Encouraged and strengthened Christian faith.",
-    tamilWork: "கிறிஸ்தவ நம்பிக்கையை ஊக்குவித்து வளர்த்தார்.",
+    year: "1975–1984",
+    name: "Rev. Fr. Thomas Kaippillai",
+    tamilName: "அருட்தந்தை தாமஸ் கைப்பிள்ளை",
+    work: "Supported people during difficult times through prayer, material assistance and pastoral care. He also encouraged the effective use of agricultural lands for the benefit of the people.",
+    tamilWork:
+      "ஆன்மீக குருவாக இருந்த காலத்தில் உலகம் எங்கும் பசி, பட்டினி என நெருக்கடி நிலை இருந்தபோதும் தந்தை மக்களுக்கு தன்னுடைய உதவிகளின் மூலமும் ஜெபத்தாலும் பொருளாலும் உதவினார். மேலும் விவசாய நிலங்களை பெரிதும் பயன்படுத்தி மக்களுக்கு நன்மைகளை செய்தார்."
   },
   {
     id: 10,
-    year: "1984 - 1988",
-    name: "Rev. Fr. Arokiya Samy",
+    year: "1984–1988",
+    name: "Rev. Fr. Arokkiyasamy",
     tamilName: "அருட்தந்தை ஆரோக்கியசாமி",
-    work: "",
-    tamilWork: "",
+    work: "Carried out renovation and improvement works for the church buildings.",
+    tamilWork:
+      "ஆலய கட்டுமான பணிகளை புனரமைப்பு செய்தார்."
   },
   {
     id: 11,
-    year: "1988 - 1989",
-    name: "Rev. Fr. V. C. Joesph",
-    tamilName: "அருட்தந்தை வி. சி. ஜோசப்",
-    work: "",
-    tamilWork: "",
+    year: "1988–1989",
+    name: "Rev. Fr. V. C. Joseph",
+    tamilName: "அருட்தந்தை V. C. ஜோசப்",
+    work: "Encouraged and strengthened the faith of the parish community.",
+    tamilWork:
+      "மக்களின் ஆன்மீகத்தை ஊக்குவித்தார்."
   },
   {
     id: 12,
-    year: "1989 - 1993",
-    name: "Rev. Fr. D. F. Savari Raj",
-    tamilName: "அருட்தந்தை டி. எப். சவேரிராஜ்",
-    work: "",
-    tamilWork: "",
+    year: "1989–1993",
+    name: "Rev. Fr. D. F. Xavier Raj",
+    tamilName: "அருட்தந்தை D. F. சேவியர் ராஜ்",
+    work: "Encouraged parish groups and strengthened community participation in parish activities.",
+    tamilWork:
+      "அன்பியங்கள் மற்றும் பங்கு குழுக்களை ஊக்குவித்தார்."
   },
   {
     id: 13,
-    year: "1993 - 1995",
-    name: "Rev. Fr. ALB. Pushparaj",
-    tamilName: "அருட்தந்தை ஏ.எல்.பி. புஷ்பராஜ்",
-    work: "",
-    tamilWork: "",
+    year: "1993–1995",
+    name: "Rev. Fr. A. L. B. Pushparaj",
+    tamilName: "அருட்தந்தை A. L. B. புஷ்பராஜ்",
+    work: "Encouraged the Sodality, choir and devotional prayer groups.",
+    tamilWork:
+      "மாதா சபை, பாடல் குழு மற்றும் பஜனை குழுக்களை ஊக்குவித்தார்."
   },
   {
     id: 14,
-    year: "1995 - 1998",
-    name: "Rev. Fr. S. Malaiyyappan",
-    tamilName: "அருட்தந்தை எஸ். மலையப்பன்",
-    work: "Carried out various renovation works and church-related works.",
-    tamilWork: "பல்வேறு சீரமைப்புப் பணிகளையும் ஆலயப் பணிகளையும் மேற்கொண்டார்.",
+    year: "1995–1998",
+    name: "Rev. Fr. S. Malaiyappan",
+    tamilName: "அருட்தந்தை S. மலையப்பன்",
+    work: "Obtained educational assistance and scholarships for students. He built a new chapel near the highway and renovated the parish priest's residence.",
+    tamilWork:
+      "மாணவர்களுக்கு கல்வி உதவித்தொகை பெற்று தந்தார். நெடுஞ்சாலையில் புதிய கெபியை கட்டினார். பங்குத்தந்தை இல்லத்தை புனரமைப்பு செய்தார்."
   },
   {
     id: 15,
-    year: "1998 - 2005",
+    year: "1998–2005",
     name: "Rev. Fr. A. Motchanathan",
-    tamilName: "அருட்தந்தை ஏ. மொட்சநாதன்",
-    work: "",
-    tamilWork: "",
+    tamilName: "அருட்தந்தை A. மோட்சநாதன்",
+    work: "Started the 'Jesus is Lord' group, organized special prayer meetings and encouraged parish celebrations and community participation.",
+    tamilWork:
+      "இயேசுவே ஆண்டவர் குழு துவங்கினார். சிறப்பு ஜெப கூட்டங்கள் மற்றும் பங்கின் பல விழாக்கள் கொண்டாடப்பட்டன."
   },
   {
     id: 16,
-    year: "2005 - 2006",
-    name: "Rev. Fr. Taikumar",
-    tamilName: "அருட்தந்தை தைகுமார்",
-    work: "",
-    tamilWork: "",
+    year: "2005–2006",
+    name: "Rev. Fr. Jeyakumar",
+    tamilName: "அருட்தந்தை ஜெயக்குமார்",
+    work: "Served the parish during a brief period and passed away in the parish after suffering from jaundice.",
+    tamilWork:
+      "இளம் தந்தை மஞ்சள் காமாலை நோயால் பாதிக்கப்பட்டு நமது பங்கில் காலமானார்."
   },
   {
     id: 17,
-    year: "2006 - 2008",
-    name: "Rev. Fr. Jesu Jayabalagan",
-    tamilName: "அருட்தந்தை இயேசு ஜெயபாலகன்",
-    work: "",
-    tamilWork: "",
+    year: "2006–2008",
+    name: "Rev. Fr. Yesu Jeyapalan",
+    tamilName: "அருட்தந்தை இயேசு ஜெயபாலன்",
+    work: "Brought together the choir groups and encouraged greater participation in parish worship.",
+    tamilWork:
+      "பாடல் குழுக்களை ஒன்றிணைத்து ஊக்குவித்தார்."
   },
   {
     id: 18,
-    year: "2008 - 2010",
-    name: "Rev. Fr. J. Jaya Prakasam",
-    tamilName: "அருட்தந்தை ஜெ. ஜெயப்பிரகாசம்",
-    work: "",
-    tamilWork: "",
+    year: "2008–2010",
+    name: "Rev. Fr. J. Jeyapiragasam",
+    tamilName: "அருட்தந்தை J. ஜெயப்பிரகாசம்",
+    work: "Laid the foundation stone for the new church, encouraged spiritual reflection and built a new chapel at Calvary Hill.",
+    tamilWork:
+      "புதிய ஆலயம் கட்ட அடிக்கல் நாட்டப்பட்டது. ஆன்மீக சிந்தனைகளை ஊக்குவித்தார். கல்வாரி மலையில் புதிய கெபி கட்டினார்."
   },
   {
     id: 19,
-    year: "2010 - 2012",
-    name: "Rev. Fr. L. Joesph Juliean",
-    tamilName: "அருட்தந்தை எல். ஜோசப் ஜூலியன்",
-    work: "",
-    tamilWork: "",
+    year: "2010–2012",
+    name: "Rev. Fr. L. Joseph Julian",
+    tamilName: "அருட்தந்தை L. ஜோசப் ஜூலியன்",
+    work: "Promoted the spiritual and social welfare of the parish community.",
+    tamilWork:
+      "பங்கின் ஆன்மீக மற்றும் சமூக நலன்களை ஊக்குவித்தார்."
   },
   {
     id: 20,
-    year: "2012 - 2017",
-    name: "Rev. Fr. Edwin Savariyppa",
+    year: "2012–2017",
+    name: "Rev. Fr. Edwin Savariyappa",
     tamilName: "அருட்தந்தை எட்வின் சவேரியப்பா",
-    work: "",
-    tamilWork: "",
+    work: "Strengthened relationships with the people, organized special chariot processions and worked thoughtfully for spiritual and social development.",
+    tamilWork:
+      "இளம் குரு மக்களின் தொடர்பினை அதிகம் வளர்த்தார். சிறப்பு தேர்கள் எடுத்தார். ஆன்மீக மற்றும் சமூக நலன்களை தெளிவாக சிந்தித்து செயல்பட்டார்."
   },
   {
     id: 21,
-    year: "2017 - 2018",
+    year: "2017–2018",
     name: "Rev. Fr. N. T. Irudhayaraj",
-    tamilName: "அருட்தந்தை என். டி. இருதயராஜ்",
-    work: "",
-    tamilWork: "",
+    tamilName: "அருட்தந்தை N. T. இருதயராஜ்",
+    work: "Carried out renewal in spiritual activities and strengthened the organization of parish ministries and activities.",
+    tamilWork:
+      "ஆன்மீக காரியங்களில் மறுசீரமைப்பு செய்தார். பங்கின் செயல்பாடுகளை தொகுத்து வழிநடத்தினார்."
   },
   {
     id: 22,
-    year: "2018 - 2025",
-    name: "L. Susainadhan",
-    tamilName: "எல். சூசைநாதன்",
-    work: "Developed the parish and undertook the centenary-related work.",
-    tamilWork: "பங்கின் வளர்ச்சிக்காகப் பணியாற்றி, நூற்றாண்டு விழா தொடர்பான பணிகளை மேற்கொண்டார்.",
+    year: "2018–2025",
+    name: "Rev. Fr. L. Susainathan",
+    tamilName: "அருட்தந்தை L. சூசைநாதன்",
+    work: "Completed major development works including the centenary memorial chapel, new church development, compound walls, renovation of the parish priest's residence, Father Paul Library, health initiatives and the Annai Chapel. He also continued pastoral service during the COVID-19 period and organized the centenary celebrations and special liturgies.",
+    tamilWork:
+      "நூற்றாண்டு நினைவு கெபி, இளைஞர் பங்கில் புதிய ஆலயம், மதில் சுவர்கள், பங்குத்தந்தை இல்லம் புனரமைப்பு, தந்தை பால் படிப்பகம், ஆலமரத்தடி ஆரோக்கிய அன்னை கெபி என பல்வேறு கட்டமைப்பு பணிகளை செய்தார். கொரோனா பேரிடர் காலத்திலும் பங்கு மக்களுக்கு ஆன்மீக தொடர் பணி, நூற்றாண்டு விழா, சிறப்பு வழிபாடுகள் என அனைத்தையும் செய்து நமது ஊரின் நலனுக்காக செயல்பட்டார்."
   },
   {
     id: 23,
-    year: "2025 - Present",
+    year: "2025–Present",
     name: "Rev. Fr. S. James",
-    tamilName: "அருட்தந்தை எஸ். ஜேம்ஸ்",
-    work: "Currently serving in Theresapuram Parish.",
-    tamilWork: "தற்போது தேரேசாபுரம் பங்கில் பணியாற்றி வருகிறார்.",
-  },
+    tamilName: "அருட்தந்தை S. ஜேம்ஸ்",
+    work: "Continues the parish mission with a focus on spiritual growth, the development of the new church, unity and equality among the people, and social activities.",
+    tamilWork:
+      "ஆன்மீக சிந்தனைகள், புதிய ஆலயம் கட்டுவது, மக்களிடையே ஒற்றுமை மற்றும் சமத்துவத்தை மேம்படுத்துதல், சமூக செயல்பாடுகள் என தற்போதைய பங்குத்தந்தையின் பணி தொடர்ந்து நடைபெறுகிறது."
+  }
 ];

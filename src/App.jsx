@@ -20,7 +20,7 @@ import PushpaLatha from "./images/Sr.Pushpa Latha.jpeg";
 import imagesProfile from "./images/images.jpg";
 import prabuMetha from "./images/prabuMetha.jpeg";
 import jayanthi from "./images/jayanthi.jpeg";
-
+import anchor from "./images/anchor.jpeg";
 import { Routes, Route, Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X, MapPin, Phone, Mail, ArrowRight, Cross, Clock, ChevronRight } from "lucide-react";
 // import { church, saints, founders, clergy, churchTimeline } from "./data";
@@ -30,9 +30,14 @@ import {
   founders,
   clergy,
   churchTimeline,
-  parishFathers
+  parishFathers,
 } from "./data";
-
+import {
+  FaWhatsapp,
+  FaInstagram,
+  FaFacebookF,
+  FaYoutube
+} from "react-icons/fa";
 
 const navItems = [
   ["/", "Home"],
@@ -56,7 +61,7 @@ const theresapuramPriests = [
     contribution:
       "Fr. S. Paul developed the area where Theresapuram now stands. What was once a forest was gradually developed into a village of around 30 families, and a chapel was built there.",
     contributionTamil:
-      "இன்று தேரேசாபுரம் அமைந்துள்ள பகுதியை அருட்தந்தை எஸ். டி. பால் அவர்கள் வளர்ச்சியடையச் செய்தார். முன்பு காடாக இருந்த இப்பகுதி படிப்படியாக சுமார் 30 குடும்பங்கள் வாழும் கிராமமாக வளர்ந்து, அங்கு ஒரு சிற்றாலயமும் கட்டப்பட்டது.",
+      "இன்று தெரேசாபுரம் அமைந்துள்ள பகுதியை அருட்தந்தை எஸ். டி. பால் அவர்கள் வளர்ச்சியடையச் செய்தார். முன்பு காடாக இருந்த இப்பகுதி படிப்படியாக சுமார் 30 குடும்பங்கள் வாழும் கிராமமாக வளர்ந்து, அங்கு ஒரு சிற்றாலயமும் கட்டப்பட்டது.",
     details: [
       "He was a great Indian missionary.",
       "He paid special attention to the spiritual and material development of the people.",
@@ -126,7 +131,7 @@ const theresapuramDevelopments = [
     description:
       "A Primary School became one of the institutions functioning in Theresapuram.",
     tamilDescription:
-      "தேரேசாபுரத்தில் செயல்பட்ட நிறுவனங்களில் ஒரு தொடக்கப்பள்ளியும் இடம்பெற்றது."
+      "தெரேசாபுரம் செயல்பட்ட நிறுவனங்களில் ஒரு தொடக்கப்பள்ளியும் இடம்பெற்றது."
   },
   {
     title: "St. Teresa's Convent",
@@ -360,37 +365,128 @@ function Header() {
 function Footer() {
   const mapUrl = `https://www.google.com/maps/search/?api=1&query=${church.latitude},${church.longitude}`;
   return (
-    <footer className="footer">
-      <div className="container footer-grid">
-        <div className="footer-about">
-          <div className="brand footer-brand">
-            <span className="brand-mark"><Cross size={24}/></span>
-            <span><strong>{church.shortName}</strong><small>Heritage • Faith • Service</small></span>
-          </div>
-          <p>A welcoming community preserving its history while serving the generations of today and tomorrow.</p>
-        </div>
-        <div>
-          <h4>Explore</h4>
-          {navItems.slice(1).map(([to,label]) => <Link key={to} to={to}>{label}</Link>)}
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <a href={`tel:${church.phone}`}><Phone size={15}/> {church.phone}</a>
-          <a href={`mailto:${church.email}`}><Mail size={15}/> {church.email}</a>
-          <span><MapPin size={15}/> {church.address}</span>
-        </div>
-        <div className="coordinates">
-          <h4>Church Location</h4>
-          <div className="coord-row"><span>Latitude</span><strong>{church.latitude.toFixed(6)}°</strong></div>
-          <div className="coord-row"><span>Longitude</span><strong>{church.longitude.toFixed(6)}°</strong></div>
-          <a className="map-link" href={mapUrl} target="_blank" rel="noreferrer">Open in Google Maps <ArrowRight size={15}/></a>
-        </div>
+   <footer className="footer">
+  <div className="container footer-grid">
+
+    <div className="footer-about">
+      <div className="brand footer-brand">
+        <span className="brand-mark">
+          <Cross size={24} />
+        </span>
+
+        <span>
+          <strong>{church.shortName}</strong>
+          <small>Heritage • Faith • Service</small>
+        </span>
       </div>
-      <div className="container footer-bottom">
-        <span>© {new Date().getFullYear()} {church.name}. All rights reserved.</span>
-        <span>Built with faith & purpose.</span>
+
+      <p>
+        A welcoming community preserving its history while serving
+        the generations of today and tomorrow.
+      </p>
+    </div>
+
+    <div className="footer-explore">
+      <h4>Explore</h4>
+
+      {navItems.slice(1).map(([to, label]) => (
+        <Link key={to} to={to}>
+          {label}
+        </Link>
+      ))}
+    </div>
+
+    <div className="footer-contact">
+      <h4>Contact</h4>
+
+      <a href={`tel:${church.phone}`}>
+        <Phone size={15} />
+        <span>{church.phone}</span>
+      </a>
+
+      <a href={`mailto:${church.email}`}>
+        <Mail size={15} />
+        <span>{church.email}</span>
+      </a>
+
+      <span>
+        <MapPin size={15} />
+        <span>{church.address}</span>
+      </span>
+    </div>
+
+    <div className="footer-social-area">
+      <h4>Connect With Us</h4>
+
+      <p>
+        Follow our parish community and stay connected with
+        Theresapuram Church.
+      </p>
+
+      <div className="footer-socials">
+
+        <a
+          href="https://wa.me/"
+          target="_blank"
+          rel="noreferrer"
+          className="social whatsapp"
+          aria-label="WhatsApp"
+        >
+          <FaWhatsapp />
+        </a>
+
+        <a
+          href="https://www.instagram.com/st_theresa_church_theresapuram?utm_source=qr&stkn=ZXFybHYyM3o0MzRo"
+          target="_blank"
+          rel="noreferrer"
+          className="social instagram"
+          aria-label="Instagram"
+        >
+          <FaInstagram />
+        </a>
+
+        <a
+          href="#"
+          target="_blank"
+          rel="noreferrer"
+          className="social facebook"
+          aria-label="Facebook"
+        >
+          <FaFacebookF />
+        </a>
+
+        <a
+          href="https://youtube.com/@stthereseofchildjesuschurchthe?si=LI6G6-qi-CXQ1BnS"
+          target="_blank"
+          rel="noreferrer"
+          className="social youtube"
+          aria-label="YouTube"
+        >
+          <FaYoutube />
+        </a>
+
       </div>
-    </footer>
+
+      <div className="footer-anchor-logo">
+        <img
+          src={anchor}
+          alt="Anchor Techno Soft"
+        />
+      </div>
+    </div>
+
+  </div>
+
+  <div className="container footer-bottom">
+    <span>
+      © {new Date().getFullYear()} {church.name}. All rights reserved.
+    </span>
+
+    <span>
+      Built with faith & purpose.
+    </span>
+  </div>
+</footer>
   );
 }
 
@@ -1228,370 +1324,80 @@ function Timeline({items}) {
   return <section className="section timeline-section soft"><div className="container"><SectionTitle eyebrow="Timeline" title="Milestones along the journey" center/><div className="timeline">{items.map(([year,text])=><div className="timeline-item" key={year}><div className="timeline-year">{year}</div><div className="timeline-dot"/><div className="timeline-text"><p>{text}</p></div></div>)}</div></div></section>;
 }
 
-// function ChurchHistory() {
-//   return (
-//     <>
-//       <PageHero
-//         eyebrow="Our Story • எங்கள் வரலாறு"
-//         title="Theresapuram Parish History"
-//         text="A journey of faith, missionary service, community growth and pastoral dedication."
-//         image={ChurchPic}
-//       />
-
-//       {/* =====================================================
-//           HISTORICAL INTRODUCTION
-//       ===================================================== */}
-
-//       <section className="section">
-//         <div className="container narrow">
-//           <SectionTitle
-//             eyebrow="The Beginning • தொடக்கம்"
-//             title="From a forest to a parish community"
-//             text="காட்டுப்பகுதியிலிருந்து ஒரு பங்குச் சமூகமாக"
-//             center
-//           />
-
-//           <div className="history-story">
-//             <p>
-//               The place where Theresapuram is situated today was once a
-//               forest. A great Indian missionary, Fr. S. Paul, developed
-//               the area into a village and built a chapel for the growing
-//               Catholic community.
-//             </p>
-
-//             <p className="tamil-text">
-//               இன்று தேரேசாபுரம் அமைந்துள்ள பகுதி ஒரு காலத்தில்
-//               காடாக இருந்தது. சிறந்த இந்திய மறைபணியாளர் அருட்தந்தை
-//               எஸ். பால் அவர்கள் இப்பகுதியை ஒரு கிராமமாக வளர்ச்சியடையச்
-//               செய்து, வளர்ந்து வந்த கத்தோலிக்க மக்களுக்காக ஒரு
-//               சிற்றாலயத்தையும் கட்டினார்.
-//             </p>
-
-//             <p>
-//               His successors continued to give attention to the spiritual
-//               and material development of the village. Observing its
-//               steady and rapid growth, Bishop David Marianayagam made
-//               Theresapuram a Parish in 1958.
-//             </p>
-
-//             <p className="tamil-text">
-//               அவரது பின்வந்தவர்கள் கிராமத்தின் ஆன்மீக மற்றும் பொருளாதார
-//               வளர்ச்சிக்கு தொடர்ந்து கவனம் செலுத்தினர். கிராமத்தின்
-//               நிலையான மற்றும் வேகமான வளர்ச்சியை கருத்தில் கொண்டு,
-//               ஆயர் டேவிட் மரியநாயகம் அவர்கள் 1958 ஆம் ஆண்டு
-//               தேரேசாபுரத்தை பங்காக நிறுவினார்.
-//             </p>
-//           </div>
-//         </div>
-//       </section>
 
 
-//       {/* =====================================================
-//           FR S PAUL
-//       ===================================================== */}
 
-//       <section className="section soft">
-//         <div className="container detail-grid">
-//           <div className="history-photo-card">
-//             <div className="history-photo-placeholder">
-//               {/* <Cross size={42} /> */}
-//               <img src={FounderPic} alt="FounderPic"/><br/>
-//               <span>Fr. S. Paul</span><br />
-//               <small>Missionary Priest</small>
-//             </div>
-//           </div>
-
-//           <div>
-//             <SectionTitle
-//               eyebrow="Missionary Pioneer • மறைபணியின் முன்னோடி"
-//               title="Rev. Fr. S. Paul"
-//               text="The missionary who helped lay the foundation of Theresapuram."
-//             />
-
-//             <div className="info-list">
-//               <div>
-//                 <strong>Born</strong>
-//                 <span>24 October 1882</span>
-//               </div>
-
-//               <div>
-//                 <strong>Birthplace</strong>
-//                 <span>Chetpet</span>
-//               </div>
-
-//               <div>
-//                 <strong>Baptized</strong>
-//                 <span>2 November 1882</span>
-//               </div>
-
-//               <div>
-//                 <strong>Tonsure</strong>
-//                 <span>16 October 1905</span>
-//               </div>
-
-//               <div>
-//                 <strong>Minor Orders</strong>
-//                 <span>18 October 1906</span>
-//               </div>
-
-//               <div>
-//                 <strong>Sub-Deacon</strong>
-//                 <span>15 October 1907</span>
-//               </div>
-
-//               <div>
-//                 <strong>Deacon</strong>
-//                 <span>19 October 1908</span>
-//               </div>
-
-//               <div>
-//                 <strong>Ordained Priest</strong>
-//                 <span>21 October 1909</span>
-//               </div>
-
-//               <div>
-//                 <strong>Died</strong>
-//                 <span>22 September 1969</span>
-//               </div>
-
-//               <div>
-//                 <strong>Buried</strong>
-//                 <span>23 September 1969 near the Cathedral</span>
-//               </div>
-//             </div>
-
-//             <p>
-//               Following the example of Fr. Darras, Fr. S. Paul spent much
-//               of his life looking after poor new Christians. His missionary
-//               service helped develop communities and strengthen Catholic
-//               life in several places.
-//             </p>
-
-//             <p className="tamil-text">
-//               அருட்தந்தை தார்ராஸ் அவர்களின் முன்மாதிரியைப் பின்பற்றி,
-//               அருட்தந்தை எஸ். பால் அவர்கள் ஏழை மற்றும் புதிய கிறிஸ்தவ
-//               மக்களின் நலனில் அதிக அக்கறை கொண்டிருந்தார். அவரது
-//               மறைபணி பல இடங்களில் கிறிஸ்தவ சமூகங்களின் வளர்ச்சிக்கும்
-//               கத்தோலிக்க விசுவாச வாழ்க்கையின் வலிமைக்கும் உதவியது.
-//             </p>
-//           </div>
-//         </div>
-//       </section>
-
-
-//       {/* =====================================================
-//           PARISH DEVELOPMENTS
-//       ===================================================== */}
-
-//       <section className="section">
-//         <div className="container">
-//           <SectionTitle
-//             eyebrow="Parish Development • பங்கு வளர்ச்சி"
-//             title="Institutions and developments"
-//             text="The parish grew spiritually, socially and educationally through several institutions."
-//             center
-//           />
-
-//           <div className="cards four">
-//             {theresapuramDevelopments.map((item, index) => (
-//               <article className="card" key={item.title}>
-//                 <span className="number">
-//                   {String(index + 1).padStart(2, "0")}
-//                 </span>
-
-//                 <h3>{item.title}</h3>
-
-//                 <h4>{item.tamil}</h4>
-
-//                 <span className="eyebrow">
-//                   {item.year}
-//                 </span>
-
-//                 <p>
-//                   <strong>English:</strong>{" "}
-//                   {item.description}
-//                 </p>
-
-//                 <p className="tamil-text">
-//                   <strong>தமிழ்:</strong>{" "}
-//                   {item.tamilDescription}
-//                 </p>
-//               </article>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-
-//       {/* =====================================================
-//           PARISH PRIESTS
-//       ===================================================== */}
-
-//       <section className="section soft">
-//         <div className="container">
-//           <SectionTitle
-//             eyebrow="Parish Priests • பங்குத்தந்தையர்கள்"
-//             title="Priests who served Theresapuram"
-//             text="The priests who carried forward the pastoral mission of the parish."
-//             center
-//           />
-
-//           <div className="clergy-history-list">
-//             {theresapuramPriests.map((priest, index) => (
-//               <article
-//                 className="clergy-history-card"
-//                 key={priest.id}
-//               >
-//                 <div className="clergy-history-number">
-//                   {String(index + 1).padStart(2, "0")}
-//                 </div>
-
-//                 <div className="clergy-history-content">
-//                   <span className="eyebrow">
-//                     {priest.period}
-//                   </span>
-
-//                   <h3>{priest.name}</h3>
-
-//                   <h4>{priest.role}</h4>
-
-//                   <p>
-//                     <strong>English:</strong>{" "}
-//                     {priest.contribution}
-//                   </p>
-
-//                   <p className="tamil-text">
-//                     <strong>தமிழ்:</strong>{" "}
-//                     {priest.contributionTamil}
-//                   </p>
-
-//                   <ul>
-//                     {priest.details.map(detail => (
-//                       <li key={detail}>{detail}</li>
-//                     ))}
-//                   </ul>
-//                 </div>
-//               </article>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-
-//       {/* =====================================================
-//           BISHOPS
-//       ===================================================== */}
-
-//       {/* <section className="section">
-//         <div className="container">
-//           <SectionTitle
-//             eyebrow="Diocese of Vellore • வேலூர் மறைமாவட்டம்"
-//             title="Bishops who served the Diocese of Vellore"
-//             text="A historical record of the bishops connected with the growth of the Diocese and its parishes."
-//             center
-//           />
-
-//           <div className="bishop-grid">
-//             {velloreBishops.map((bishop, index) => (
-//               <article className="bishop-card" key={bishop.id}>
-//                 <span className="number">
-//                   {String(index + 1).padStart(2, "0")}
-//                 </span>
-
-//                 <h3>{bishop.name}</h3>
-
-//                 <span className="bishop-role">
-//                   {bishop.role}
-//                 </span>
-
-//                 <p>{bishop.contribution}</p>
-//               </article>
-//             ))}
-//           </div>
-
-//           <div className="history-note">
-//             <Cross size={24} />
-
-//             <div>
-//               <h3>Historical record</h3>
-
-//               <p>
-//                 The complete succession of Bishops of the Diocese of
-//                 Vellore should be added from the official diocesan
-//                 historical records so that every name and period is
-//                 accurately represented.
-//               </p>
-
-//               <p className="tamil-text">
-//                 வேலூர் மறைமாவட்டத்தின் அனைத்து ஆயர்களின் பெயர்கள் மற்றும்
-//                 பணிக்காலங்கள் அதிகாரப்பூர்வ மறைமாவட்ட வரலாற்றுப்
-//                 பதிவுகளிலிருந்து சரிபார்க்கப்பட்டு இப்பக்கத்தில்
-//                 சேர்க்கப்பட வேண்டும்.
-//               </p>
-//             </div>
-//           </div>
-//         </div>
-//       </section> */}
-
-
-//       {/* =====================================================
-//           LEGACY
-//       ===================================================== */}
-
-//       <section className="section soft">
-//         <div className="container">
-//           <SectionTitle
-//             eyebrow="Our Legacy • எங்கள் மரபு"
-//             title="A parish built through faith and service"
-//             text="விசுவாசத்தாலும் சேவையாலும் கட்டியெழுப்பப்பட்ட பங்கு"
-//             center
-//           />
-
-//           <div className="legacy-grid">
-//             <div>
-//               <span>01</span>
-//               <h3>Faith</h3>
-//               <p>
-//                 Building a strong Catholic community through prayer,
-//                 pastoral care and spiritual formation.
-//               </p>
-//               <p className="tamil-text">
-//                 ஜெபம், ஆன்மீக பராமரிப்பு மற்றும் விசுவாச வளர்ச்சியின்
-//                 மூலம் வலுவான கத்தோலிக்க சமூகத்தை உருவாக்குதல்.
-//               </p>
-//             </div>
-
-//             <div>
-//               <span>02</span>
-//               <h3>Education</h3>
-//               <p>
-//                 Supporting children and young people through education
-//                 and formation.
-//               </p>
-//               <p className="tamil-text">
-//                 கல்வி மற்றும் நல்லொழுக்க வளர்ச்சியின் மூலம் குழந்தைகள்
-//                 மற்றும் இளைஞர்களை முன்னேற்றுதல்.
-//               </p>
-//             </div>
-
-//             <div>
-//               <span>03</span>
-//               <h3>Service</h3>
-//               <p>
-//                 Serving the elderly, the poor and the wider community.
-//               </p>
-//               <p className="tamil-text">
-//                 முதியோர், ஏழைகள் மற்றும் பரந்த சமூகத்திற்கு சேவை செய்தல்.
-//               </p>
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-//     </>
-//   );
-// }
 
 function ChurchHistory() {
+  const [donationForm, setDonationForm] = useState({
+    name: "",
+    contact: "",
+    description: ""
+  });
+
+  const CHURCH_WHATSAPP = "916374452131";
+  const CHURCH_EMAIL = "yourchurch@email.com";
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setDonationForm((prev) => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const getDonationMessage = () => {
+    return `Dear Church,
+
+I would like to support the new church building project.
+
+Name: ${donationForm.name}
+Contact: ${donationForm.contact}
+
+Message:
+${donationForm.description}
+
+May God bless this mission.`;
+  };
+
+  const handleWhatsApp = () => {
+    if (
+      !donationForm.name ||
+      !donationForm.contact ||
+      !donationForm.description
+    ) {
+      alert("Please fill in all the fields before connecting.");
+      return;
+    }
+
+    const message = encodeURIComponent(getDonationMessage());
+
+    window.open(
+      `https://wa.me/${CHURCH_WHATSAPP}?text=${message}`,
+      "_blank"
+    );
+  };
+
+  const handleEmail = () => {
+    if (
+      !donationForm.name ||
+      !donationForm.contact ||
+      !donationForm.description
+    ) {
+      alert("Please fill in all the fields before sending.");
+      return;
+    }
+
+    const subject = encodeURIComponent(
+      "New Church Building Support"
+    );
+
+    const body = encodeURIComponent(getDonationMessage());
+
+    window.location.href = `mailto:${CHURCH_EMAIL}?subject=${subject}&body=${body}`;
+  };
+
   return (
     <>
       <PageHero
@@ -1601,7 +1407,6 @@ function ChurchHistory() {
         image={ChurchPic}
       />
 
-      {/* Parish Introduction */}
       <section className="section">
         <div className="container narrow">
           <SectionTitle
@@ -1611,35 +1416,57 @@ function ChurchHistory() {
           />
 
           <p>
-            Our parish has grown through the dedication, prayer and service
-            of many priests, religious people and parishioners. Each
-            generation has contributed to the spiritual and social growth
-            of Theresapuram Parish.
+            Our parish has grown through the dedication, prayer and
+            service of many priests, religious people and parishioners.
+            Each generation has contributed to the spiritual and social
+            growth of Theresapuram Parish.
           </p>
 
           <p className="tamil-text">
             பல அருட்தந்தையர்கள், துறவியர்கள் மற்றும் பங்கு மக்களின்
             அர்ப்பணிப்பு, ஜெபம் மற்றும் சேவையின் மூலம் எங்கள் பங்கு
-            வளர்ச்சியடைந்துள்ளது. ஒவ்வொரு தலைமுறையும் தேரேசாபுரம் பங்கின்
-            ஆன்மீக மற்றும் சமூக வளர்ச்சிக்கு தங்களது பங்களிப்பை
-            வழங்கியுள்ளது.
+            வளர்ச்சியடைந்துள்ளது. ஒவ்வொரு தலைமுறையும் தெரேசாபுரம்
+            பங்கின் ஆன்மீக மற்றும் சமூக வளர்ச்சிக்கு தங்களது
+            பங்களிப்பை வழங்கியுள்ளது.
           </p>
         </div>
       </section>
 
-      {/* Existing Timeline */}
       <Timeline items={churchTimeline} />
 
-      {/* Fathers Section */}
       <section className="section soft parish-fathers-section">
         <div className="container">
-
           <SectionTitle
             eyebrow="Parish Priests • பங்குத்தந்தையர்கள்"
             title="Fathers Who Served in Theresapuram Parish"
-            text="தேரேசாபுரம் பங்கில் பணியாற்றிய அருட்தந்தையர்கள்"
+            text="தெரேசாபுரம் பங்கில் பணியாற்றிய அருட்தந்தையர்கள்"
             center
           />
+
+          <div className="parish-fathers-intro">
+            <div className="parish-fathers-intro-icon">
+              ✝
+            </div>
+
+            <div>
+              <h3>
+                Servants who shaped our parish
+              </h3>
+
+              <p>
+                From the earliest years to the present day, each
+                parish priest has contributed to the spiritual,
+                social and physical growth of Theresapuram Parish.
+              </p>
+
+              <p className="tamil-text">
+                ஆரம்ப காலத்திலிருந்து இன்று வரை, ஒவ்வொரு
+                பங்குத்தந்தையும் தெரேசாபுரம் பங்கின் ஆன்மீக,
+                சமூக மற்றும் கட்டமைப்பு வளர்ச்சிக்கு
+                முக்கிய பங்களிப்பை வழங்கியுள்ளனர்.
+              </p>
+            </div>
+          </div>
 
           <div className="parish-fathers-list">
             {parishFathers.map((father, index) => (
@@ -1647,70 +1474,191 @@ function ChurchHistory() {
                 className="parish-father-row"
                 key={father.id}
               >
-
-                {/* Tamil Card */}
                 <div className="parish-father-card tamil-card">
+                  <div className="father-card-top">
+                    <span className="father-number">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
 
-                  <span className="father-number">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
+                    <span className="father-year">
+                      {father.year}
+                    </span>
+
+                    <span className="language-badge">
+                      தமிழ்
+                    </span>
+                  </div>
 
                   <div className="father-card-content">
+                    <span className="father-label">
+                      பங்குத்தந்தையர்
+                    </span>
 
-                    <div className="father-year">
-                      {father.year}
-                    </div>
+                    <h3>{father.tamilName}</h3>
 
-                    <h3>
-                      {father.tamilName}
-                    </h3>
+                    <div className="father-divider" />
 
-                    {father.tamilWork && (
-                      <p>
-                        {father.tamilWork}
-                      </p>
-                    )}
+                    <p>{father.tamilWork}</p>
+                  </div>
 
+                  <div className="father-card-footer">
+                    <span>தெரேசாபுரம்  பங்கு</span>
+                    <span>✦</span>
                   </div>
                 </div>
 
-                {/* English Card */}
                 <div className="parish-father-card english-card">
+                  <div className="father-card-top">
+                    <span className="father-number">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
 
-                  <span className="father-number">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
+                    <span className="father-year">
+                      {father.year}
+                    </span>
+
+                    <span className="language-badge">
+                      English
+                    </span>
+                  </div>
 
                   <div className="father-card-content">
+                    <span className="father-label">
+                      PARISH PRIEST
+                    </span>
 
-                    <div className="father-year">
-                      {father.year}
-                    </div>
+                    <h3>{father.name}</h3>
 
-                    <h3>
-                      {father.name}
-                    </h3>
+                    <div className="father-divider" />
 
-                    {father.work && (
-                      <p>
-                        {father.work}
-                      </p>
-                    )}
+                    <p>{father.work}</p>
+                  </div>
 
+                  <div className="father-card-footer">
+                    <span>Theresapuram Parish</span>
+                    <span>✦</span>
                   </div>
                 </div>
-
               </article>
             ))}
           </div>
-
         </div>
       </section>
 
-      {/* History Closing Section */}
+      <section className="section church-support-section">
+        <div className="container">
+          <div className="church-support">
+            <div className="church-support-content">
+              <span className="eyebrow">
+                Build Our Future • நமது எதிர்கால ஆலயம்
+              </span>
+
+              <h2>
+                Help Us Build Our New Church
+              </h2>
+
+              <h3 className="tamil-heading">
+                புதிய ஆலயம் கட்டுவதற்கு உங்கள் பங்களிப்பை வழங்குங்கள்
+              </h3>
+
+              <p>
+                We are preparing to build a new church for the
+                spiritual needs of future generations. If you are
+                willing to support this mission through your prayers,
+                contribution or other assistance, please contact us.
+              </p>
+
+              <p className="tamil-text">
+                வருங்கால தலைமுறைகளின் ஆன்மீக தேவைகளுக்காக புதிய
+                ஆலயம் கட்டுவதற்கான பணிகள் நடைபெறுகின்றன. உங்கள்
+                ஜெபம், நிதியுதவி அல்லது பிற உதவிகளின் மூலம் இந்த
+                இறைப்பணியில் பங்கேற்க விரும்பினால் எங்களை
+                தொடர்புகொள்ளுங்கள்.
+              </p>
+
+              <div className="church-support-highlight">
+                <span>✦</span>
+                <div>
+                  <strong>
+                    Every contribution becomes part of our parish story.
+                  </strong>
+                  <small>
+                    ஒவ்வொரு பங்களிப்பும் நமது பங்கின் வரலாற்றில்
+                    ஒரு பகுதியாகும்.
+                  </small>
+                </div>
+              </div>
+            </div>
+
+            <div className="church-support-form">
+              <div className="support-form-heading">
+                <span>Contact With Church</span>
+                <h3>
+                  I Would Like To Support
+                </h3>
+              </div>
+
+              <div className="support-form">
+                <div className="support-field">
+                  <label>Your Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={donationForm.name}
+                    onChange={handleChange}
+                    placeholder="Enter your name"
+                  />
+                </div>
+
+                <div className="support-field">
+                  <label>Contact Number</label>
+                  <input
+                    type="tel"
+                    name="contact"
+                    value={donationForm.contact}
+                    onChange={handleChange}
+                    placeholder="Enter your contact number"
+                  />
+                </div>
+
+                <div className="support-field">
+                  <label>Message / Description</label>
+                  <textarea
+                    name="description"
+                    value={donationForm.description}
+                    onChange={handleChange}
+                    placeholder="Tell us how you would like to support the church..."
+                    rows="5"
+                  />
+                </div>
+
+                <div className="support-actions">
+                  <button
+                    type="button"
+                    className="support-btn whatsapp-btn"
+                    onClick={handleWhatsApp}
+                  >
+                    Connect on WhatsApp
+                    <span>→</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    className="support-btn email-btn"
+                    onClick={handleEmail}
+                  >
+                    Send Email
+                    <span>→</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section">
         <div className="container split history-callout">
-
           <div>
             <span className="eyebrow">
               Preserving our memory • நமது நினைவுகளைப் பாதுகாத்தல்
@@ -1725,24 +1673,24 @@ function ChurchHistory() {
             </h3>
 
             <p>
-              The history of Theresapuram Parish is carried through the
-              people who prayed, served, taught, guided and built the
-              community throughout the years.
+              The history of Theresapuram Parish is carried through
+              the people who prayed, served, taught, guided and built
+              the community throughout the years.
             </p>
 
             <p className="tamil-text">
-              தேரேசாபுரம் பங்கின் வரலாறு என்பது ஆண்டுகள் மற்றும் தேதிகள்
-              மட்டுமல்ல. பல ஆண்டுகளாக இங்கு ஜெபித்தவர்கள், பணியாற்றியவர்கள்,
-              கற்பித்தவர்கள், வழிநடத்தியவர்கள் மற்றும் சமூகத்தை உருவாக்கிய
-              மக்களின் வாழ்க்கையிலும் சேவையிலும் அது தொடர்கிறது.
+              தெரேசாபுரம் பங்கின் வரலாறு என்பது ஆண்டுகள் மற்றும்
+              தேதிகள் மட்டுமல்ல. பல ஆண்டுகளாக இங்கு ஜெபித்தவர்கள்,
+              பணியாற்றியவர்கள், கற்பித்தவர்கள், வழிநடத்தியவர்கள்
+              மற்றும் சமூகத்தை உருவாக்கிய மக்களின் வாழ்க்கையிலும்
+              சேவையிலும் அது தொடர்கிறது.
             </p>
           </div>
 
           <img
             src={ChurchPic}
-            alt="Church interior"
+            alt="Theresapuram Church"
           />
-
         </div>
       </section>
     </>
@@ -1903,7 +1851,7 @@ function FounderHistory() {
       <section className="section soft">
         <div className="container">
           <SectionTitle
-            eyebrow="03 • Theresapuram • தேரேசாபுரம்"
+            eyebrow="03 • Theresapuram • தெரேசாபுரம்"
             title="His Contribution to Theresapuram"
             text="தேரேசாபுரத்திற்கான அவரது பணி"
             center
@@ -1916,7 +1864,7 @@ function FounderHistory() {
               <div>
                 <h3>
                   Theresapuram Before Development •
-                  வளர்ச்சிக்கு முன் தேரேசாபுரம்
+                  வளர்ச்சிக்கு முன் தெரேசாபுரம்
                 </h3>
 
                 <p>
@@ -2128,7 +2076,7 @@ function FathersSisters() {
           <SectionTitle
             eyebrow="Theresapuram Vocations"
             title="Fathers & Sisters born in Theresapuram"
-            text="தேரேசாபுரத்தில் பிறந்து திருச்சபைக்கு அர்ப்பணிப்புடன் பணியாற்றும் அருட்தந்தையர்கள் மற்றும் அருட்சகோதரிகள்."
+            text="தெரேசாபுரம் பிறந்து திருச்சபைக்கு அர்ப்பணிப்புடன் பணியாற்றும் அருட்தந்தையர்கள் மற்றும் அருட்சகோதரிகள்."
             center
           />
 
@@ -2453,7 +2401,7 @@ function FathersSisters() {
                 </p>
 
                 <p className="tamil-text">
-                  தேரேசாபுரத்தில் பிறந்த அருட்சகோதரிகளின்
+                  தெரேசாபுரம் பிறந்த அருட்சகோதரிகளின்
                   பதிவுகள் இங்கே சேர்க்கப்படும்.
                 </p>
 
