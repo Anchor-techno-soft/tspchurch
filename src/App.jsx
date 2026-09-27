@@ -25,6 +25,11 @@ import anchor from "./images/anchor.jpeg";
 import hero1 from "./images/tsp-church.jpeg";
 import hero2 from "./images/gebi.jpeg";
 import hero3 from "./images/gebitopview.jpeg";
+import hero4 from "./images/alaamarammathatwo.jpeg";
+import hero5 from "./images/alamaram.jpeg";
+import hero6 from "./images/alamarammathaone.jpeg";
+import hero7 from "./images/kallaraithottammaingate.jpeg";
+import hero8 from "./images/mayiladumparai.jpeg";
 
 import { Routes, Route, Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X, MapPin, Phone, Mail, ArrowRight, Cross, Clock, ChevronRight } from "lucide-react";
@@ -517,68 +522,10 @@ function SectionTitle({eyebrow, title, text, center=false}) {
   </div>;
 }
 
-// function Home() {
-//   return (
-//     <>
-//       <section className="hero">
-//         <div className="hero-overlay"/>
-//         <div className="container hero-content">
-//           <span className="eyebrow light">A living heritage of faith</span>
-//           <h1>Rooted in history.<br/><em>Growing in faith.</em></h1>
-//           <p>{church.tagline}. Discover the people, stories and milestones that shaped our church community.</p>
-//           <div className="hero-actions">
-//             <Link className="button primary" to="/church-history">Explore Our History <ArrowRight size={17}/></Link>
-//             <Link className="button ghost" to="/fathers-sisters">Meet Our Community</Link>
-//           </div>
-//         </div>
-//         <div className="hero-scroll">Scroll to explore <ChevronRight size={16}/></div>
-//       </section>
-
-//       <section className="section intro">
-//         <div className="container split">
-//           <div>
-//             <span className="eyebrow">Welcome</span>
-//             <h2>A place where generations meet.</h2>
-//             <p>For decades, this church has been a place of prayer, celebration, learning and service. Our story is carried by every family, pastor, sister and volunteer who has served here.</p>
-//             <Link className="text-link" to="/church-history">Read the church story <ArrowRight size={16}/></Link>
-//           </div>
-//           <div className="quote-card">
-//             <Cross size={27}/>
-//             <blockquote>“Faith is not only something we inherit; it is something we live, share and pass forward.”</blockquote>
-//             <span>— Parish Community</span>
-//           </div>
-//         </div>
-//       </section>
-
-//       <section className="section soft">
-//         <div className="container">
-//           <SectionTitle eyebrow="Our heritage" title="Stories that continue to inspire" text="Explore the people and milestones behind our community." center/>
-//           <div className="feature-grid">
-//             <FeatureCard title="Saint History" text="Discover the life, mission and legacy of saints who inspire our faith." to="/saint-history" image={saints[0].image}/>
-//             <FeatureCard title="Church History" text="Walk through the important milestones that shaped our parish." to="/church-history" image="https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=1200&q=80"/>
-//             <FeatureCard title="Founder History" text="Learn about the vision and service of our founding pastor." to="/founder-history" image={founders[0].image}/>
-//           </div>
-//         </div>
-//       </section>
-
-//       <section className="section people-preview">
-//         <div className="container">
-//           <SectionTitle eyebrow="Our people" title="Those who serve our community" text="Meet our fathers and sisters who continue the mission of service."/>
-//           <div className="people-row">
-//             {clergy.slice(0,3).map(person => <PersonCard key={person.id} person={person}/>)}
-//           </div>
-//           <div className="center-action"><Link className="button outline" to="/fathers-sisters">View all fathers & sisters <ArrowRight size={16}/></Link></div>
-//         </div>
-//       </section>
-
-//       <LocationSection/>
-//     </>
-//   );
-// }
 
 function Home() {
 
-  const heroImages = [hero1, hero2, hero3];
+  const heroImages = [hero1, hero2, hero3, hero4, hero5, hero6, hero7, hero8];
 
 const [currentHero, setCurrentHero] = useState(0);
 
@@ -795,21 +742,6 @@ function PersonCard({person}) {
     <div><span>{person.role}</span><h3>{person.name}</h3><p>{person.service}</p></div>
   </article>;
 }
-
-// function SaintHistory() {
-//   const saint = saints[0];
-//   return <>
-//     <PageHero eyebrow="Lives of faith" title="Saint History" text="Stories of courage, compassion and devotion that continue to guide generations." image={saint.image}/>
-//     <section className="section">
-//       <div className="container detail-grid">
-//         <div className="portrait"><img src={saint.image} alt={saint.name}/><div className="portrait-caption"><strong>{saint.name}</strong><span>{saint.years}</span></div></div>
-//         <div><SectionTitle eyebrow="A life of service" title={saint.name} text={saint.summary}/><p>His missionary journey remains a reminder that faith can cross languages, cultures and borders. Use this page as a reusable template for adding more saints, biographies, photographs and historical sources.</p></div>
-//       </div>
-//     </section>
-//     <Timeline items={saint.timeline}/>
-//     <section className="section soft"><div className="container"><SectionTitle eyebrow="More inspiration" title="Another life of service" center/><div className="feature-grid two">{saints.slice(1).map(s=><FeatureCard key={s.id} title={s.name} text={s.summary} to="/saint-history" image={s.image}/>)}</div></div></section>
-//   </>;
-// }
 
 function SaintHistory() {
   const saint = saints[0];
@@ -1346,11 +1278,6 @@ function SaintHistory() {
 function Timeline({items}) {
   return <section className="section timeline-section soft"><div className="container"><SectionTitle eyebrow="Timeline" title="Milestones along the journey" center/><div className="timeline">{items.map(([year,text])=><div className="timeline-item" key={year}><div className="timeline-year">{year}</div><div className="timeline-dot"/><div className="timeline-text"><p>{text}</p></div></div>)}</div></div></section>;
 }
-
-
-
-
-
 function ChurchHistory() {
   const [donationForm, setDonationForm] = useState({
     name: "",
@@ -1358,8 +1285,8 @@ function ChurchHistory() {
     description: ""
   });
 
-  const CHURCH_WHATSAPP = "916374452131";
-  const CHURCH_EMAIL = "yourchurch@email.com";
+  const CHURCH_WHATSAPP = "919443636055";
+  const CHURCH_EMAIL = "thersapuramparish@email.com";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -2439,7 +2366,6 @@ function FathersSisters() {
     </>
   );
 }
-
 
 function LocationSection() {
   const mapUrl = `https://www.google.com/maps/search/?api=1&query=${church.latitude},${church.longitude}`;
