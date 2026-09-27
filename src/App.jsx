@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import father1 from "./images/st-therese.jpg";
 import FounderPic from "./images/fr-paul.jpeg";
 import ChurchPic from "./images/tsp-church.jpeg";
@@ -21,6 +21,11 @@ import imagesProfile from "./images/images.jpg";
 import prabuMetha from "./images/prabuMetha.jpeg";
 import jayanthi from "./images/jayanthi.jpeg";
 import anchor from "./images/anchor.jpeg";
+
+import hero1 from "./images/tsp-church.jpeg";
+import hero2 from "./images/gebi.jpeg";
+import hero3 from "./images/gebitopview.jpeg";
+
 import { Routes, Route, Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X, MapPin, Phone, Mail, ArrowRight, Cross, Clock, ChevronRight } from "lucide-react";
 // import { church, saints, founders, clergy, churchTimeline } from "./data";
@@ -572,48 +577,66 @@ function SectionTitle({eyebrow, title, text, center=false}) {
 // }
 
 function Home() {
+
+  const heroImages = [hero1, hero2, hero3];
+
+const [currentHero, setCurrentHero] = useState(0);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentHero((prev) => (prev + 1) % heroImages.length);
+  }, 3000);
+
+  return () => clearInterval(interval);
+}, []);
+
   return (
     <>
-      <section className="hero">
-        <div className="hero-overlay" />
+      <section
+  className="hero"
+  style={{
+    backgroundImage: `url(${heroImages[currentHero]})`,
+  }}
+>
+  <div className="hero-overlay" />
 
-        <div className="container hero-content">
-          <span className="eyebrow light">
-            A LIFE OF LOVE • அன்பின் வாழ்க்கை
-          </span>
+  <div className="container hero-content">
+    <span className="eyebrow light">
+      A LIFE OF LOVE • அன்பின் வாழ்க்கை
+    </span>
 
-          <h1>
-            Little in the world.
-            <br />
-            <em>Great in God's love.</em>
-          </h1>
+    <h1>
+      Little in the world.
+      <br />
+      <em>Great in God's love.</em>
+    </h1>
 
-          <p className="hero-bilingual">
-            Discover the life and spirituality of St. Thérèse of the Child
-            Jesus, the Little Flower.
-            <br />
-            <span>
-              சிறிய மலராக வாழ்ந்து, இறைவனின் அன்பில் பெரியவரான புனித
-              குழந்தை இயேசுவின் தெரேசாவின் வாழ்க்கையையும் ஆன்மீகத்தையும்
-              அறிந்துகொள்வோம்.
-            </span>
-          </p>
+    <p className="hero-bilingual">
+      Discover the life and spirituality of St. Thérèse of the Child
+      Jesus, the Little Flower.
+      <br />
+      <span>
+        சிறிய மலராக வாழ்ந்து, இறைவனின் அன்பில் பெரியவரான புனித
+        குழந்தை இயேசுவின் தெரேசாவின் வாழ்க்கையையும் ஆன்மீகத்தையும்
+        அறிந்துகொள்வோம்.
+      </span>
+    </p>
 
-          <div className="hero-actions">
-            <Link className="button primary" to="/saint-history">
-              Discover Her Life <ArrowRight size={17} />
-            </Link>
+    <div className="hero-actions">
+      <Link className="button primary" to="/saint-history">
+        Discover Her Life <ArrowRight size={17} />
+      </Link>
 
-            <Link className="button ghost" to="/church-history">
-              Our Church History
-            </Link>
-          </div>
-        </div>
+      <Link className="button ghost" to="/church-history">
+        Our Church History
+      </Link>
+    </div>
+  </div>
 
-        <div className="hero-scroll">
-          Scroll to explore <ChevronRight size={16} />
-        </div>
-      </section>
+  <div className="hero-scroll">
+    Scroll to explore <ChevronRight size={16} />
+  </div>
+</section>
 
       <section className="section intro">
         <div className="container split">
